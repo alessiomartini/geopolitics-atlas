@@ -6,6 +6,7 @@
 (function () {
   const width = 960;
   const height = 500;
+  const MARKER_RADIUS = 7;
   const worldUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
   const svg = d3.select("#world-map")
@@ -33,28 +34,34 @@
         .attr("class", "country")
         .attr("d", path);
 
+      const markerNodes = CONFLICTS.map((d) => {
+        const [x, y] = projection(d.coordinates);
+        return { data: d, x, y };
+      });
+      resolveMarkerCollisions(markerNodes, MARKER_RADIUS * 2 + 6);
+
       svg.append("g")
         .attr("class", "markers")
         .selectAll("circle")
-        .data(CONFLICTS)
+        .data(markerNodes)
         .join("circle")
         .attr("class", "conflict-marker")
-        .attr("r", 7)
-        .attr("cx", (d) => projection(d.coordinates)[0])
-        .attr("cy", (d) => projection(d.coordinates)[1])
+        .attr("r", MARKER_RADIUS)
+        .attr("cx", (n) => n.x)
+        .attr("cy", (n) => n.y)
         .attr("tabindex", 0)
         .attr("role", "link")
-        .attr("aria-label", (d) => `${d.title}: ${d.summary}`)
+        .attr("aria-label", (n) => `${n.data.title}: ${n.data.summary}`)
         .on("mouseenter", showTooltip)
         .on("mousemove", moveTooltip)
         .on("mouseleave", hideTooltip)
         .on("focus", showTooltip)
         .on("blur", hideTooltip)
-        .on("click", (event, d) => navigate(d))
-        .on("keydown", (event, d) => {
+        .on("click", (event, n) => navigate(n.data))
+        .on("keydown", (event, n) => {
           if (event.key === "Enter" || event.key === " ") {
             event.preventDefault();
-            navigate(d);
+            navigate(n.data);
           }
         });
     })
@@ -72,10 +79,10 @@
     window.location.href = d.page;
   }
 
-  function showTooltip(event, d) {
+  function showTooltip(event, n) {
     tooltip
       .classed("hidden", false)
-      .html(`<strong>${escapeHtml(d.title)}</strong><p>${escapeHtml(d.summary)}</p>`);
+      .html(`<strong>${escapeHtml(n.data.title)}</strong><p>${escapeHtml(n.data.summary)}</p>`);
     moveTooltip(event);
   }
 
@@ -103,5 +110,42 @@
     const div = document.createElement("div");
     div.textContent = str;
     return div.innerHTML;
+  }
+
+  // At world-map scale, markers for conflicts in the same region (e.g. the
+  // eastern Mediterranean) can project to nearly the same point and overlap.
+  // Nudge such markers apart in screen space, without altering the
+  // geographic coordinates used elsewhere, so every marker stays clickable.
+  function resolveMarkerCollisions(nodes, minDist) {
+    const iterations = 30;
+    for (let iter = 0; iter < iterations; iter++) {
+      let moved = false;
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const a = nodes[i];
+          const b = nodes[j];
+          let dx = b.x - a.x;
+          let dy = b.y - a.y;
+          let dist = Math.hypot(dx, dy);
+          if (dist < minDist) {
+            moved = true;
+            if (dist < 0.01) {
+              // Coincident points: nudge along a deterministic direction.
+              dx = 1;
+              dy = 0;
+              dist = 1;
+            }
+            const push = (minDist - dist) / 2;
+            const ux = dx / dist;
+            const uy = dy / dist;
+            a.x -= ux * push;
+            a.y -= uy * push;
+            b.x += ux * push;
+            b.y += uy * push;
+          }
+        }
+      }
+      if (!moved) break;
+    }
   }
 })();
