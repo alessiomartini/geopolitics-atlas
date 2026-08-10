@@ -7,6 +7,13 @@ HTML/CSS/JS, no build step, deployable directly on GitHub Pages.
 Not intended for search indexing (`robots.txt` and per-page `noindex` are
 set accordingly).
 
+## Other projects in this repository
+
+- [`realtime-earth/`](realtime-earth/) — **The Real-Time Earth**, a modular
+  catalog of live global data feeds, deployed separately as a single Cloudflare
+  Worker. It has its own build, dependencies and CI workflow, and does not
+  affect the static site described below.
+
 ## Structure
 
 ```
