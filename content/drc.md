@@ -2,17 +2,26 @@
 
 ## Historical Context
 
-TODO: fill in historical background leading up to the current situation.
+Eastern Democratic Republic of Congo has experienced near-continuous armed conflict since the mid-1990s, rooted in the spillover of the 1994 Rwandan genocide, contested land and citizenship rights for Congolese Tutsi (Banyamulenge) communities, and competition over the region's gold, tin, tantalum, and coltan deposits. The First (1996–97) and Second (1998–2003) Congo Wars drew in multiple neighboring states and killed millions, mostly from disease and displacement. The March 23 Movement (M23) takes its name from a 2009 peace deal between Kinshasa and an earlier Tutsi-led militia, the CNDP; M23 emerged in 2012 when former CNDP fighters mutinied from the Congolese army (FARDC), accusing Kinshasa of failing to honor that agreement. A UN-backed regional force helped defeat M23's first offensive in 2013, and the group remained largely dormant until it resurfaced in late 2021 with a much larger, better-equipped force. Since then it has steadily seized territory across North Kivu and South Kivu provinces, operating alongside the political-military coalition AFC (Congo River Alliance), amid a long-running proliferation of over a hundred other armed groups, including the Hutu-linked FDLR, in the same region.
 
 ## Current State of Facts
 
-TODO: fill in verified, sourced facts about the current state of the conflict.
+M23 seized Goma, capital of North Kivu, in late January 2025, and Bukavu in South Kivu the following month; the UN estimated close to 3,000 people were killed in the fighting around Goma alone ([CNN](https://www.cnn.com/2025/02/06/africa/dr-congo-goma-violence-deaths-intl-hnk)). A UN Group of Experts report described 3,000–4,000 Rwandan troops fighting alongside M23 with advanced weaponry, including anti-aircraft systems ([The New Humanitarian](https://www.thenewhumanitarian.org/news-feature/2025/01/31/drc-goma-capture-sparks-fears-deeper-regional-conflict-rwanda-backed-rebels-m23)); UN Secretary-General António Guterres condemned Rwanda's military support for M23. The DRC government and M23/AFC signed a Doha "Declaration of Principles" in July 2025 and a more detailed Doha Framework for a Comprehensive Peace Agreement in November 2025, brokered by Qatar with US involvement, laying out eight protocols still to be negotiated ([Al Jazeera](https://www.aljazeera.com/news/2025/11/15/drc-rwanda-backed-m23-sign-framework-deal-for-peace-after-talks-in-qatar)). Implementation has been slow: as of August 2026, the DRC government has begun releasing prisoners to M23 under the deal via ICRC-facilitated transfers, but core issues — restoration of Congolese state authority in M23-held areas, the return of hundreds of thousands of displaced people, and disarmament — remain unresolved ([Al Jazeera](https://www.aljazeera.com/news/2026/8/7/dr-congo-releases-15-prisoners-to-m23-rebels-as-part-of-doha-peace-process)).
 
 ## Contested Narratives / Common Myths
 
-TODO: fill in narratives or claims that are contested, who contests them,
-and why.
+**Rwandan involvement.** Rwanda's government has consistently denied backing M23, describing its own troop presence in eastern DRC as defensive measures against the FDLR, a Hutu militia it says threatens Rwandan Tutsis and includes perpetrators of the 1994 genocide. Successive UN Group of Experts reports, the US State Department, and a French Senate inquiry have concluded Rwanda provides substantial military support to M23, including troops and weapons ([Al Jazeera](https://www.aljazeera.com/news/2022/8/4/rwanda-backing-m23-rebels-in-drc-un-experts)). Kigali disputes the characterization of its role and frames its critics as ignoring the security threat the FDLR poses to Rwanda.
+
+**"Blood minerals" as root cause.** International advocacy campaigns and some media coverage have long framed the conflict as driven primarily by competition over "conflict minerals" such as coltan and cobalt. Researchers and analysts, including at The New Humanitarian and in academic literature, argue this narrative oversimplifies a conflict also driven by unresolved citizenship and land disputes, regional security competition, and weak Congolese state authority, and that it has sometimes distorted policy responses ([The New Humanitarian](https://www.thenewhumanitarian.org/opinion/2025/02/11/why-conflict-mineral-narratives-dont-explain-m23-rebellion-dr-congo)).
+
+**M23's stated motives.** M23 and Rwanda present the rebellion as defending Congolese Tutsi communities from discrimination and armed Hutu groups. Kinshasa and many independent analysts describe M23 as a vehicle for Rwandan territorial and economic interests in the mineral-rich Kivus, noting the movement's expansion far beyond areas with significant Tutsi populations.
 
 ## Sources
 
-- TODO: add linked sources, one per list item.
+- [CNN — Nearly 3,000 people killed after rebels seize key eastern city, UN says](https://www.cnn.com/2025/02/06/africa/dr-congo-goma-violence-deaths-intl-hnk)
+- [The New Humanitarian — Goma capture sparks fears of deeper regional conflict as Rwanda-backed rebels push south](https://www.thenewhumanitarian.org/news-feature/2025/01/31/drc-goma-capture-sparks-fears-deeper-regional-conflict-rwanda-backed-rebels-m23)
+- [Al Jazeera — DRC, Rwanda-backed M23 sign framework deal for peace after talks in Qatar](https://www.aljazeera.com/news/2025/11/15/drc-rwanda-backed-m23-sign-framework-deal-for-peace-after-talks-in-qatar)
+- [Al Jazeera — DR Congo releases 15 prisoners to M23 rebels as part of Doha peace process](https://www.aljazeera.com/news/2026/8/7/dr-congo-releases-15-prisoners-to-m23-rebels-as-part-of-doha-peace-process)
+- [Al Jazeera — Rwanda backing M23 rebels in DRC: UN experts](https://www.aljazeera.com/news/2022/8/4/rwanda-backing-m23-rebels-in-drc-un-experts)
+- [The New Humanitarian — Why conflict mineral narratives don't explain the M23 rebellion in DR Congo](https://www.thenewhumanitarian.org/opinion/2025/02/11/why-conflict-mineral-narratives-dont-explain-m23-rebellion-dr-congo)
+- [France 24 — DR Congo and Rwanda-backed M23 rebels sign ceasefire agreement in Qatar](https://www.france24.com/en/africa/20250719-dr-congo-rwanda-backed-m23-rebels-sign-ceasefire-agreement-qatar)

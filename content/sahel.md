@@ -2,17 +2,24 @@
 
 ## Historical Context
 
-TODO: fill in historical background leading up to the current situation.
+Jihadist insurgency in the central Sahel traces back to the 2012 collapse of northern Mali, when Tuareg separatists and allied Islamist groups, including al-Qaeda-linked factions, seized territory before a 2013 French-led intervention (Operation Serval) pushed them back. Insurgent groups regrouped and spread into Burkina Faso and Niger over the following decade. In 2017 several al-Qaeda-affiliated factions merged into Jama'at Nasr al-Islam wal Muslimin (JNIM), while a rival Islamic State Sahel Province (ISGS/ISSP) also expanded in the tri-border area. Chronic insecurity, weak state presence, and popular frustration with counter-insurgency failures fueled a wave of military coups: Mali (2020 and 2021), Burkina Faso (2022, twice), and Niger (2023). The juntas expelled French forces, which had led regional counter-terrorism operations since 2013, and turned to Russia's Wagner Group (later restructured as the state-run Africa Corps) for military support. In September 2023 the three countries formed the Alliance of Sahel States and, in January 2025, formally withdrew from the regional bloc ECOWAS, cementing a break with former Western partners.
 
 ## Current State of Facts
 
-TODO: fill in verified, sourced facts about the current state of the conflict.
+Violence has intensified sharply since the juntas took power. ACLED recorded 23,968 conflict fatalities across the region in 2025, a 24% increase over 2024 ([ACLED](https://acleddata.com/report/economic-warfare-escalates-militants-expand-beyond-sahel)); UN humanitarian monitors put central Sahel deaths at roughly 9,362 in 2025 and recorded 2,640 civilian deaths between January and March 2026. More than 3 million people are internally displaced across Mali, Burkina Faso, and Niger, with Burkina Faso's junta estimated to control only around 40% of national territory. Since September 2025, JNIM has enforced a fuel blockade on Mali's capital, Bamako, burning tanker trucks and cutting off supply routes that carry roughly 95% of the country's imported fuel; the Malian army has escorted convoys through in response, and the blockade eased and was reimposed in cycles through 2026 ([Al Jazeera](https://www.aljazeera.com/news/2025/10/29/fuel-crisis-in-mali-spirals-as-armed-group-chokes-off-supplies-to-capital)). In April 2026, JNIM and allied fighters launched what analysts described as their largest offensive since 2012, striking Bamako, Kati, Gao, and Mopti; Mali's defense minister was killed. Russia's Africa Corps reinforced Mali with an additional roughly 1,000 personnel in June 2026. JNIM has also expanded operations southward into Benin, Togo, and other coastal West African states, which ACLED characterizes as deliberate strategic expansion rather than incidental spillover.
 
 ## Contested Narratives / Common Myths
 
-TODO: fill in narratives or claims that are contested, who contests them,
-and why.
+**Sovereignty versus repression.** The Sahelian juntas frame their break with France and ECOWAS, and their partnership with Russia, as a reclaiming of sovereignty from a legacy of colonial and Western exploitation, and cite counter-terrorism gains where claimed. Human Rights Watch and other monitors counter that the juntas have themselves been implicated in serious abuses against civilians — including alleged massacres by Malian forces and Wagner/Africa Corps personnel — while curtailing media freedom and democratic transitions, arguing the anti-colonial framing obscures a shift toward authoritarian, unaccountable rule ([AllAfrica/HRW summary reporting](https://allafrica.com/stories/202412120327.html)).
+
+**Effectiveness of the Russia pivot.** Junta governments and Russian state-linked commentary present the switch from French to Russian military partnership as a more effective counter-terrorism strategy. Independent analysts, including at International Crisis Group and Western security researchers, point to the sharp rise in fatalities and territorial losses since 2022–2023 as evidence the Russian-backed approach has coincided with, not reversed, insurgent gains — though juntas attribute continued violence to the insurgents' external support and to the disruption caused by the earlier French presence.
+
+**Who the insurgents represent.** JNIM and ISGS present their campaigns as defense of local Muslim communities against corrupt, foreign-backed states. Regional governments and most outside analysts describe the groups as exploiting genuine local grievances (over land, herder-farmer tensions, and state neglect) instrumentally, noting extensive violence against the same civilian populations they claim to represent.
 
 ## Sources
 
-- TODO: add linked sources, one per list item.
+- [ACLED — Economic warfare escalates as militants expand beyond the Sahel](https://acleddata.com/report/economic-warfare-escalates-militants-expand-beyond-sahel)
+- [Al Jazeera — Fuel crisis in Mali spirals as armed group chokes off supplies to capital](https://www.aljazeera.com/news/2025/10/29/fuel-crisis-in-mali-spirals-as-armed-group-chokes-off-supplies-to-capital)
+- [International Crisis Group — Understanding JNIM's Expansion Beyond the Sahel](https://www.crisisgroup.org/rpt/africa/sahel-west-africa/321-le-jnim-et-le-dilemme-de-lexpansion-au-dela-du-sahel)
+- [CNN — Russia is seeking to expand its military presence in Africa with another paramilitary group](https://www.cnn.com/2025/08/25/africa/russia-africa-corps-wagner-intl-cmd)
+- [AllAfrica (HRW reporting) — Mali Junta Slammed for 'Atrocities' Against Civilians One Year After UN Withdrawal](https://allafrica.com/stories/202412120327.html)
