@@ -43,11 +43,11 @@ jobs:
       # No install step: the script is dependency-free on purpose, so source
       # verification never depends on the project's build being healthy.
 
-      - name: Probe (human-readable)
-        run: node scripts/verify-endpoints.mjs | tee /tmp/verify.txt
-
-      - name: Probe (machine-readable)
-        run: node scripts/verify-endpoints.mjs --json > /tmp/verify.json
+      # One pass, two outputs. Running the script twice doubled every request
+      # and was enough on its own to trip the rate limits of the sources being
+      # assessed, which made the report measure our own impatience.
+      - name: Probe every source once
+        run: node scripts/verify-endpoints.mjs --json-out=/tmp/verify.json | tee /tmp/verify.txt
 
       - name: Publish to job summary
         if: always()
