@@ -2,17 +2,24 @@
 
 ## Historical Context
 
-TODO: fill in historical background leading up to the current situation.
+Haiti's current security collapse follows decades of political instability, but its acute phase dates to the July 2021 assassination of President Jovenel Moïse, who had ruled by decree since 2017 after elections were repeatedly postponed. Moïse's assassination — for which the motive and full chain of responsibility remain disputed in ongoing prosecutions — left a power vacuum filled by unelected acting prime minister Ariel Henry, whose government failed to arrest the growing power of armed gangs. Gangs, some with long-standing ties to political and economic elites, expanded their territory, ranks, and weapons stockpiles amid the disorder. In September 2023, gang leader and former police officer Jimmy "Barbecue" Chérizier merged his G9 coalition with rival gangs to form Viv Ansanm ("Living Together"), which by 2024 had effectively taken over most of the capital, Port-au-Prince, forcing Henry's resignation and prompting the creation of a Transitional Presidential Council. The UN Security Council authorized a Kenya-led Multinational Security Support mission in 2023, which deployed in mid-2024 but struggled to reverse gang expansion given its limited size and support-only mandate.
 
 ## Current State of Facts
 
-TODO: fill in verified, sourced facts about the current state of the conflict.
+Viv Ansanm and allied gang coalitions control an estimated 85–90% of Port-au-Prince as of 2026 and have pushed into the Artibonite, Centre, and Grand Nord departments. The International Organization for Migration estimated approximately 1.5 million people internally displaced as of June 2026, and the UN reports roughly 1,642 people killed and 745 injured in gang-related violence in the first months of 2026 alone, after more than 5,500 killed in 2025 ([UN News](https://news.un.org/en/story/2026/04/1167283)). The IPC food security assessment found roughly 5.7 million people — about half the population — facing acute food insecurity. In May 2025 the United States designated Viv Ansanm a Foreign Terrorist Organization. Under UN Security Council Resolution 2793, the Kenya-led mission began transitioning in 2026 into a larger, UN-backed Gang Suppression Force with an arrest mandate (unlike the earlier support-only mission), eventually intended to reach roughly 5,500 personnel; Kenyan police contingents withdrew in phases between December 2025 and March 2026, and the first troops from the new force, including a Chadian contingent, arrived starting in April 2026 ([Al Jazeera](https://www.aljazeera.com/news/2026/4/1/first-troops-from-un-backed-gang-suppression-force-arrive-in-haiti)). As of mid-2026 the force remained in early deployment with well under its target strength.
 
 ## Contested Narratives / Common Myths
 
-TODO: fill in narratives or claims that are contested, who contests them,
-and why.
+**Gang leadership's self-framing.** Jimmy "Barbecue" Chérizier presents Viv Ansanm as a political-social movement resisting a corrupt political and economic elite and foreign interference, rather than a criminal enterprise, and has warned that international peacekeepers would be met with armed resistance. The United States, the Haitian government, and international rights monitors reject this framing: the US Treasury has designated Chérizier a human rights abuser over killings including a 2018 massacre, and Viv Ansanm's May 2025 terrorist designation formally categorizes the coalition as a terrorist organization rather than a political actor, citing extensive killings, rape, and displacement attributed to it.
+
+**Foreign intervention: help or occupation.** The UN, United States, and troop-contributing nations (Kenya, later Chad and others) frame the multinational security missions as necessary support for an overwhelmed Haitian police force. Some Haitian civil society voices and gang leaders themselves invoke Haiti's history of foreign occupation (including the 1915–1934 US occupation and troubled past UN missions, notably the UN peacekeeping force linked to a 2010 cholera outbreak) to characterize renewed foreign deployment as a repeat of exploitative intervention rather than genuine assistance; this critique coexists with widespread public desperation for security given the scale of gang violence.
+
+**Government legitimacy.** The Transitional Presidential Council governing Haiti since 2024 is recognized internationally as the country's interim authority pending elections, but it lacks any electoral mandate — Haiti has not held a national election since 2016 — and critics, including some Haitian political actors, question its legitimacy and internal cohesion, while the council and its backers argue it remains the only available framework for an eventual return to elected government.
 
 ## Sources
 
-- TODO: add linked sources, one per list item.
+- [UN News — Haiti's freefall demands urgent global action as millions face hunger and violence](https://news.un.org/en/story/2026/04/1167283)
+- [Al Jazeera — First troops from UN-backed Gang Suppression Force arrive in Haiti](https://www.aljazeera.com/news/2026/4/1/first-troops-from-un-backed-gang-suppression-force-arrive-in-haiti)
+- [International Crisis Group — Undoing Haiti's Deadly Gang Alliance](https://www.crisisgroup.org/rpt/latin-america-caribbean/haiti/110-undoing-haitis-deadly-gang-alliance)
+- [InSight Crime — Jimmy Chérizier, alias 'Barbecue'](https://insightcrime.org/haiti-organized-crime-news/jimmy-cherizier-alias-barbecue/)
+- [IPC — Haiti: Acute Food Insecurity Situation for September 2025 – February 2026 and Projection for March – June 2026](https://www.ipcinfo.org/ipc-country-analysis/details-map/en/c/1159760/)

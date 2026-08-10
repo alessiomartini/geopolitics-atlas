@@ -2,17 +2,32 @@
 
 ## Historical Context
 
-TODO: fill in historical background leading up to the current situation.
+Armed conflict between Myanmar's central government and ethnic minority insurgencies has continued in various forms since independence from Britain in 1948, driven by unresolved demands for autonomy among Kachin, Karen, Shan, Rakhine and other groups. A 2011 shift away from direct military rule raised hopes of democratic consolidation, but the army (the Tatmadaw) retained a constitutionally guaranteed political role and, from 2017, led a campaign against the Rohingya Muslim minority that the UN and rights groups have characterized as ethnic cleansing ([Human Rights Watch](https://www.hrw.org/news/2021/02/01/myanmar-military-coup-kills-fragile-democracy)).
+
+The current war traces to 1 February 2021, when the military detained civilian leader Aung San Suu Kyi, President Win Myint and other officials of the National League for Democracy (NLD), alleging fraud in the November 2020 election that the NLD had won by a landslide ([Human Rights Watch](https://www.hrw.org/news/2021/02/01/myanmar-military-coup-kills-fragile-democracy)). The coup triggered mass civil disobedience that the military met with lethal force, and by mid-2021 ousted lawmakers had formed a parallel National Unity Government (NUG), which created an armed wing, the People's Defence Force, in May 2021 — a step widely regarded as the formal start of the civil war. The NUG subsequently built loose coordination with longer-established ethnic armed organizations fighting the Tatmadaw on multiple fronts.
 
 ## Current State of Facts
 
-TODO: fill in verified, sourced facts about the current state of the conflict.
+The junta held a tightly controlled, multi-phase general election between 28 December 2025 and January 2026, the first since the coup. The military-backed Union Solidarity and Development Party (USDP) won the large majority of contested seats; the NLD was barred from participating and Aung San Suu Kyi remains imprisoned ([NPR](https://www.npr.org/2025/12/27/nx-s1-5649519/myanmar-election); [Al Jazeera](https://www.aljazeera.com/news/2025/12/31/myanmar-military-reports-50-percent-turnout-in-first-election-phase)). A UN special rapporteur and Human Rights Watch both described the vote as illegitimate given the exclusion of major opposition figures and the absence of free campaigning conditions ([Human Rights Watch](https://www.hrw.org/news/2025/11/16/myanmar-elections-a-fraudulent-claim-for-credibility)). On 10 April 2026, coup leader Min Aung Hlaing was sworn in as president of a nominally civilian government under the new parliament ([Al Jazeera](https://www.aljazeera.com/news/2026/4/10/myanmars-coup-leader-min-aung-hlaing-sworn-in-as-president)), a transition the International Crisis Group assessed as military consolidation rather than a genuine transfer of power ([International Crisis Group](https://www.crisisgroup.org/brf/asia-pacific/myanmar-china/b188-myanmars-new-administration-military-consolidation-not-transition)).
+
+Fighting continues across large parts of the country alongside a series of China-brokered local ceasefires in northern Shan State since late 2025. The UN estimates roughly 3.8 million people remain internally displaced as of mid-2026, with continued airstrikes, clashes and earthquake recovery needs driving new displacement ([UN OCHA](https://www.unocha.org/publications/report/myanmar/myanmar-humanitarian-update-no-52-13-july-2026)).
 
 ## Contested Narratives / Common Myths
 
-TODO: fill in narratives or claims that are contested, who contests them,
-and why.
+**Who governs Myanmar legitimately.** Myanmar's military government describes the 2025–26 election and Min Aung Hlaing's presidency as a constitutional return to civilian rule; military spokesman Zaw Min Tun cited turnout figures of roughly 50–55 percent as evidence of public participation ([Al Jazeera](https://www.aljazeera.com/news/2025/12/31/myanmar-military-reports-50-percent-turnout-in-first-election-phase)). The National Unity Government, most Western governments, and UN human rights bodies reject this framing, calling the vote a stage-managed exercise to legitimize continued military rule given the NLD's exclusion, Aung San Suu Kyi's imprisonment, and fighting that prevented voting in large areas ([Human Rights Watch](https://www.hrw.org/news/2025/11/16/myanmar-elections-a-fraudulent-claim-for-credibility); [NPR](https://www.npr.org/2025/12/27/nx-s1-5649519/myanmar-election)).
+
+**Who controls the country.** The junta and state media present the military as the sole legitimate national authority restoring order. The NUG and allied ethnic armed organizations claim control or contestation of large parts of the country's territory and population; independent estimates of territorial control vary widely by methodology and source, with most assessments agreeing only that the military's direct administrative reach has shrunk since 2021 ([Al Jazeera](https://www.aljazeera.com/amp/news/2024/5/31/myanmar-military-control-weakening-as-anti-coup-forces-advance-report)).
+
+**Unity of the resistance.** International coverage sometimes portrays the anti-junta side as a single coalition. In practice the NUG and the roughly two dozen ethnic armed organizations fighting the Tatmadaw are allied but not unified: some ethnic groups prioritize their own territorial autonomy over the NUG's nationwide federal-democracy program, and coordination between them is loose rather than command-based ([Al Jazeera](https://www.aljazeera.com/news/2025/1/4/qa-leader-of-myanmars-shadow-government-talks-civil-war-strategy-in-2025)).
 
 ## Sources
 
-- TODO: add linked sources, one per list item.
+- [Human Rights Watch — Myanmar: Military Coup Kills Fragile Democracy](https://www.hrw.org/news/2021/02/01/myanmar-military-coup-kills-fragile-democracy)
+- [NPR — Myanmar is holding phased elections. Here's why they're being called a 'sham'](https://www.npr.org/2025/12/27/nx-s1-5649519/myanmar-election)
+- [Al Jazeera — Myanmar military reports 50 percent turnout in first election phase](https://www.aljazeera.com/news/2025/12/31/myanmar-military-reports-50-percent-turnout-in-first-election-phase)
+- [Human Rights Watch — Myanmar: Elections a Fraudulent Claim for Credibility](https://www.hrw.org/news/2025/11/16/myanmar-elections-a-fraudulent-claim-for-credibility)
+- [Al Jazeera — Myanmar's coup leader Min Aung Hlaing sworn in as president](https://www.aljazeera.com/news/2026/4/10/myanmars-coup-leader-min-aung-hlaing-sworn-in-as-president)
+- [International Crisis Group — Myanmar's New Administration: Military Consolidation, Not Transition](https://www.crisisgroup.org/brf/asia-pacific/myanmar-china/b188-myanmars-new-administration-military-consolidation-not-transition)
+- [UN OCHA — Myanmar Humanitarian Update No. 52, 13 July 2026](https://www.unocha.org/publications/report/myanmar/myanmar-humanitarian-update-no-52-13-july-2026)
+- [Al Jazeera — Myanmar military control weakening as anti-coup forces advance: report](https://www.aljazeera.com/amp/news/2024/5/31/myanmar-military-control-weakening-as-anti-coup-forces-advance-report)
+- [Al Jazeera — Q&A: Leader of Myanmar's shadow government talks civil war strategy in 2025](https://www.aljazeera.com/news/2025/1/4/qa-leader-of-myanmars-shadow-government-talks-civil-war-strategy-in-2025)

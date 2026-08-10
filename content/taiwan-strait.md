@@ -2,17 +2,29 @@
 
 ## Historical Context
 
-TODO: fill in historical background leading up to the current situation.
+The Chinese Communist Party and the Kuomintang-led Republic of China (ROC) fought a civil war that ended in 1949 with the Communist Party establishing the People's Republic of China (PRC) on the mainland while the defeated ROC government retreated to Taiwan, where it continued to claim to be China's legitimate government. Neither side has ever signed a peace treaty formally ending the civil war. The PRC has never governed Taiwan and asserts that the island is part of "one China" whose "reunification" is a core national objective, using this position as the basis of its foreign relations, including the "one China principle" it requires diplomatic partners to accept ([EveryCRSReport — evolution of the "One China" policy](https://www.everycrsreport.com/reports/RL30341.html)).
+
+Taiwan underwent its own democratization from the late 1980s, and today functions as a self-governing democracy with its own military, currency, and elected government, though most countries — including the United States — do not maintain formal diplomatic relations with it, instead adhering to varying forms of "one China" policy while maintaining unofficial ties. The U.S. has pursued a policy of "strategic ambiguity," supplying Taiwan with defensive arms under the 1979 Taiwan Relations Act without explicitly committing to defend it militarily. Cross-strait tensions have escalated markedly since the 2016 and 2020 elections of Tsai Ing-wen and the 2024 election of Lai Ching-te, both from the China-skeptic Democratic Progressive Party, which Beijing has repeatedly accused of pursuing separatism.
 
 ## Current State of Facts
 
-TODO: fill in verified, sourced facts about the current state of the conflict.
+Chinese military activity around Taiwan has intensified sharply since May 2024. Taiwan's Ministry of National Defense recorded 3,764 People's Liberation Army aircraft incursions into Taiwan's Air Defense Identification Zone in 2025, a 22.4 percent increase over 2024 and part of a trend that has seen incursions rise nearly every year since 2020 ([Al Jazeera](https://www.aljazeera.com/news/2025/12/30/how-are-chinas-new-war-games-around-taiwan-different-from-earlier-drills)). Beijing has also staged large-scale exercises such as "Strait Thunder-2025A," which Taiwan's defense ministry said tested the island's territorial-sea and airspace boundaries ([Al Jazeera](https://www.aljazeera.com/news/2026/1/1/us-says-chinese-military-drills-around-taiwan-cause-unnecessary-tensions)).
+
+President Lai Ching-te has repeatedly stated that Taiwan and the PRC are "not subordinate to each other" and pledged to defend the island's sovereignty and democratic system while rejecting Beijing's "one country, two systems" proposal ([NPR](https://www.npr.org/2026/01/01/g-s1-104249/taiwan-president-sovereignty-china-military-drills)). Xi Jinping used his January 2026 New Year address to call "reunification" with Taiwan "unstoppable," and in April 2026 the PRC's Taiwan Affairs Office reiterated that reunification is "the only path" for Taiwan ([Al Jazeera](https://www.aljazeera.com/news/2026/1/1/chinas-xi-says-reunification-with-taiwan-unstoppable); Xinhua, cited below). Most third-party analysts describe the trajectory as one of rising risk without a change to the underlying military balance in 2026, as neither government has altered its fundamental position.
 
 ## Contested Narratives / Common Myths
 
-TODO: fill in narratives or claims that are contested, who contests them,
-and why.
+**Whether Taiwan is part of China.** The PRC government maintains that Taiwan is an inalienable part of Chinese territory under its "one China principle" and that its sovereignty claim is not open to negotiation; this is the position stated by China's Ministry of Foreign Affairs, the Taiwan Affairs Office, and repeated by Xi Jinping ([Xinhua](https://english.news.cn/20260422/a0e706af26fb4ee681030dcfafd54f91/c.html)). Taiwan's government under President Lai holds that the Republic of China is already a sovereign, independent state that does not require a formal declaration of independence, and that only Taiwan's people can decide its future ([NPR](https://www.npr.org/2026/01/01/g-s1-104249/taiwan-president-sovereignty-china-military-drills)). Most third-party governments, including the United States, decline to take a position on this underlying sovereignty question and instead speak of preserving the cross-strait "status quo."
+
+**What the "status quo" means.** The phrase is used by nearly all parties but does not mean the same thing to each: Washington's "one China policy" acknowledges but does not endorse Beijing's position and opposes any unilateral change to the situation by either side; Beijing treats "status quo" rhetoric from Taipei or Washington as, in its own state media's framing, cover for creeping independence (see CGTN/Xinhua framing under South China Sea and Taiwan coverage); and the Kuomintang opposition in Taiwan favors the ambiguous "1992 Consensus" formula that Lai's Democratic Progressive Party has explicitly rejected.
+
+**Chinese military activity as "routine" versus "coercion."** Beijing's Ministry of National Defense and state broadcasters describe drills and patrols near Taiwan as routine exercises within China's own airspace and waters in response to what it calls separatist provocations. Taiwan's government and most Tier A/B international outlets describe the same activity as a deliberate campaign of military pressure ("gray-zone coercion") intended to raise costs and normalize a larger PLA presence around the island ([Al Jazeera](https://www.aljazeera.com/news/2025/12/30/how-are-chinas-new-war-games-around-taiwan-different-from-earlier-drills)).
 
 ## Sources
 
-- TODO: add linked sources, one per list item.
+- [EveryCRSReport — China/Taiwan: Evolution of the "One China" Policy](https://www.everycrsreport.com/reports/RL30341.html)
+- [Al Jazeera — How are China's new war games around Taiwan different from earlier drills?](https://www.aljazeera.com/news/2025/12/30/how-are-chinas-new-war-games-around-taiwan-different-from-earlier-drills)
+- [Al Jazeera — US says Chinese military drills around Taiwan cause unnecessary tensions](https://www.aljazeera.com/news/2026/1/1/us-says-chinese-military-drills-around-taiwan-cause-unnecessary-tensions)
+- [NPR — Taiwan's President Lai Ching-te pledges to defend island's sovereignty](https://www.npr.org/2026/01/01/g-s1-104249/taiwan-president-sovereignty-china-military-drills)
+- [Al Jazeera — China's Xi says 'reunification' with Taiwan 'unstoppable'](https://www.aljazeera.com/news/2026/1/1/chinas-xi-says-reunification-with-taiwan-unstoppable)
+- [Xinhua — Reunification only path for Taiwan, serves well-being of Taiwan compatriots: mainland spokesperson](https://english.news.cn/20260422/a0e706af26fb4ee681030dcfafd54f91/c.html)

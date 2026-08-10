@@ -2,17 +2,24 @@
 
 ## Historical Context
 
-TODO: fill in historical background leading up to the current situation.
+Israel and Lebanon-based forces have clashed intermittently since Palestinian militants used southern Lebanon as a base after 1970. Israel invaded Lebanon in 1982 to drive out the PLO, besieging Beirut and occupying the south; the invasion catalyzed the founding of Hezbollah, an Iran-backed Shia militia and political movement, which fought an 18-year insurgency against Israeli occupation until Israel's withdrawal in 2000 ([Middle East Eye](https://www.middleeasteye.net/explainers/history-israel-invasions-lebanon)). In July 2006, Hezbollah's cross-border abduction of two Israeli soldiers triggered a 34-day war that killed over 1,000 Lebanese and around 160 Israelis and ended with a UN-brokered ceasefire (UN Security Council Resolution 1701) that called for Hezbollah's disarmament south of the Litani River — a provision never implemented. Hezbollah subsequently built up a large rocket and missile arsenal with Iranian support. Following Hamas's 7 October 2023 attack on Israel, Hezbollah opened a "support front," exchanging fire with Israel along the border for nearly a year. In September 2024, Israel escalated sharply, detonating explosive-rigged pagers used by Hezbollah operatives and killing the group's longtime leader Hassan Nasrallah in an airstrike, before launching a ground invasion of south Lebanon.
 
 ## Current State of Facts
 
-TODO: fill in verified, sourced facts about the current state of the conflict.
+A ceasefire agreement, mediated by the US and France, took effect on 27 November 2024, requiring Israeli withdrawal from Lebanon and the removal of Hezbollah's armed presence south of the Litani River, to be enforced by the Lebanese army and UNIFIL ([Al Jazeera](https://www.aljazeera.com/news/2024/11/26/ceasefire-between-lebanons-hezbollah-and-israel-what-to-know)). Israel has kept troops at five positions inside Lebanese territory and has continued frequent strikes, saying it is degrading Hezbollah's efforts to rearm; UNIFIL, the UN peacekeeping mission in Lebanon, has documented more than 10,000 Israeli violations of Lebanese airspace or territory since the ceasefire began, including over 8,100 air violations ([UN News](https://news.un.org/en/story/2026/08/1168067)). The Lebanese army announced on 8 January 2026 that it had completed the first phase of disarming non-state groups south of the Litani, though Israeli officials called this "encouraging" but insufficient, citing continued Hezbollah reconstitution efforts ([Al Jazeera](https://www.aljazeera.com/news/2026/1/8/lebanons-army-says-phase-one-of-hezbollah-disarmament-in-south-completed)). A "second phase," extending disarmament efforts from the Litani to the Awali River further north, is under discussion. Israel maintains a roughly 10-kilometer military buffer inside Lebanon it calls the "Yellow Line," which Lebanon and Hezbollah say constitutes an unlawful occupation violating the ceasefire ([Al Jazeera](https://www.aljazeera.com/news/2026/4/19/does-israels-yellow-line-violate-the-lebanon-ceasefire)). Lebanon has filed formal complaints with the UN over Israeli strikes it says have killed civilians.
 
 ## Contested Narratives / Common Myths
 
-TODO: fill in narratives or claims that are contested, who contests them,
-and why.
+**Who is violating the ceasefire.** Lebanon's government and parliament speaker have accused Israel of dozens of specific breaches — including strikes, demolitions of border-village homes, and persistent drone overflights — and cite UNIFIL's tally of thousands of Israeli air and ground incursions. Israel's government counters that its strikes are lawful responses to Hezbollah's continued rearmament and reconstitution of military infrastructure, which it says itself constitutes the more serious ceasefire violation, though Israel has not always detailed specific evidence for individual strikes. Hezbollah, for its part, has occasionally claimed limited retaliatory fire as "defensive" responses to what it calls repeated Israeli violations.
+
+**Civilian versus combatant status of strike victims.** Lebanese state media has described people killed in some Israeli strikes as civilians, while the Israeli military has described the same individuals as militants or persons violating the terms of the truce — a recurring pattern of disputed characterization that independent verification has often been unable to resolve quickly given access restrictions in strike-affected areas.
+
+**Legality of the "Yellow Line" buffer zone.** Israel frames its continued military presence inside Lebanese territory as a necessary security measure pending full Hezbollah disarmament and argues it retains a right to strike threats inside Lebanon under the ceasefire terms. The Lebanese government and Hezbollah reject this as a violation of Lebanese sovereignty and of the ceasefire's basic premise that Israeli forces would withdraw; this dispute remains unresolved and is a recurring source of renewed flare-ups.
 
 ## Sources
 
-- TODO: add linked sources, one per list item.
+- [Middle East Eye — A history of Israel's invasions of Lebanon](https://www.middleeasteye.net/explainers/history-israel-invasions-lebanon)
+- [Al Jazeera — Ceasefire between Lebanon's Hezbollah and Israel: What to know](https://www.aljazeera.com/news/2024/11/26/ceasefire-between-lebanons-hezbollah-and-israel-what-to-know)
+- [Al Jazeera — Lebanon's army says phase one of Hezbollah disarmament in south completed](https://www.aljazeera.com/news/2026/1/8/lebanons-army-says-phase-one-of-hezbollah-disarmament-in-south-completed)
+- [Al Jazeera — Does Israel's 'Yellow Line' violate the Lebanon ceasefire?](https://www.aljazeera.com/news/2026/4/19/does-israels-yellow-line-violate-the-lebanon-ceasefire)
+- [UN News — Israel violates Lebanese airspace, kills over two dozen in Gaza in weekend strikes](https://news.un.org/en/story/2026/08/1168067)

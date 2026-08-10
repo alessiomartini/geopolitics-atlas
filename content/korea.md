@@ -2,17 +2,28 @@
 
 ## Historical Context
 
-TODO: fill in historical background leading up to the current situation.
+Korea was divided at the 38th parallel by the United States and the Soviet Union following Japan's defeat in 1945, hardening into two separate states in 1948: the Republic of Korea (South) and the Democratic People's Republic of Korea (North). North Korea invaded the South in June 1950, beginning the Korean War, in which a U.S.-led United Nations Command backed the South and China intervened on the North's side after U.S. forces approached the Chinese border. The war ended not with a peace treaty but with an armistice signed on 27 July 1953 by the UN Command, North Korea and China; South Korea's government did not sign it. The armistice fixed a Military Demarcation Line close to the original 38th-parallel boundary and created the Demilitarized Zone (DMZ), a roughly 4-kilometer-wide buffer that remains one of the most heavily fortified borders in the world. Because no peace treaty followed, North and South Korea have remained formally at war for over seven decades.
+
+Decades of intermittent inter-Korean engagement — including summits in 2000, 2007 and 2018 — coexisted with recurring crises over North Korea's nuclear weapons program, which it has pursued since the 1990s despite the Six-Party Talks (2003–2008) and later direct U.S.-North Korea diplomacy under the Trump administration, including a February 2019 Hanoi summit that ended without an agreement over the sequencing of denuclearization steps and sanctions relief.
 
 ## Current State of Facts
 
-TODO: fill in verified, sourced facts about the current state of the conflict.
+In January 2024, Kim Jong Un declared that peaceful reunification was no longer a goal of North Korean policy, redefining South Korea as a "hostile state" and ordering the removal of symbols of the reunification project; North Korea has since revised its constitution to reflect a "two hostile states" doctrine rather than the earlier framework of eventual unification ([International Crisis Group](https://www.crisisgroup.org/cmt/asia-pacific/korean-peninsula/korean-reunification-abandoned-or-merely-deferred)). North Korea has continued expanding its missile arsenal through 2026, including tests of nuclear-capable short-range ballistic missiles with cluster-munition warheads in April 2026 ([NPR](https://www.npr.org/2026/04/09/g-s1-116848/north-korea-says-its-latest-weapons-tests-included-missiles-with-cluster-bomb-warheads)) and ballistic missile launches from its Sinpo area later that month ([Al Jazeera](https://www.aljazeera.com/news/2026/4/19/north-korea-launches-ballistic-missiles-towards-sea-off-its-east-coast)).
+
+South Korean President Lee Jae-myung, in office since June 2025, has pursued a more conciliatory posture than his predecessor, pledging in a March 2026 address to formally respect North Korea's political system and to avoid pursuing "unification by absorption," while working to revive stalled inter-Korean dialogue and stabilize relations with China and Japan alongside the U.S. alliance ([The Diplomat](https://thediplomat.com/2026/03/south-korean-president-pledges-to-respect-norths-system-in-march-1st-address/)). North Korea has shown little reciprocal interest in resuming talks and has deepened military and economic cooperation with Russia and China; in May 2026 Beijing and Moscow issued a joint statement opposing further sanctions or military pressure on Pyongyang.
 
 ## Contested Narratives / Common Myths
 
-TODO: fill in narratives or claims that are contested, who contests them,
-and why.
+**Whether unification remains a live goal.** For decades both Korean governments nominally endorsed eventual reunification. North Korea's government, under Kim Jong Un, now explicitly rejects that goal, terming South Korea a permanently hostile foreign state ([KCNA, cited via Al Jazeera](https://www.aljazeera.com/news/2025/8/19/kim-jong-un-pledges-to-speed-up-nuclear-build-up-over-us-south-korea-drills)). South Korea's Lee Jae-myung administration has not abandoned the constitutional goal of unification but has in practice de-emphasized it in favor of "peaceful coexistence" and mutual recognition, a shift some conservative South Korean commentators criticize as a concession to Pyongyang, while the administration frames it as realism about near-term prospects.
+
+**Whether North Korea's nuclear arsenal is negotiable.** North Korea's government describes its nuclear status as "irreversible" and a permanent feature of its security posture, not a bargaining chip for sanctions relief ([Al Jazeera, citing KCNA](https://www.aljazeera.com/news/2025/8/19/kim-jong-un-pledges-to-speed-up-nuclear-build-up-over-us-south-korea-drills)). The United States and South Korea's stated policy goal remains the "complete denuclearization" of North Korea, though the 2019 Hanoi summit's collapse over sequencing disputes, and the lack of any denuclearization progress since, has led many analysts to treat that goal as increasingly aspirational rather than a near-term negotiating basis — a gap between declared policy and analyst assessment rather than a resolved dispute.
+
+**Responsibility for renewed tension.** Pyongyang's state media frames its weapons tests and hardened posture as a defensive response to what it calls hostile U.S.–South Korea–Japan joint military exercises and sanctions. Seoul, Washington and Tokyo characterize North Korea's missile and nuclear program as the primary driver of instability, and their joint exercises as defensive deterrence in response to it — each side presents its own actions as reactive to the other's.
 
 ## Sources
 
-- TODO: add linked sources, one per list item.
+- [International Crisis Group — Korean Reunification: Abandoned or Merely Deferred?](https://www.crisisgroup.org/cmt/asia-pacific/korean-peninsula/korean-reunification-abandoned-or-merely-deferred)
+- [NPR — North Korea says its latest weapons tests included missiles with cluster-bomb warheads](https://www.npr.org/2026/04/09/g-s1-116848/north-korea-says-its-latest-weapons-tests-included-missiles-with-cluster-bomb-warheads)
+- [Al Jazeera — North Korea launches ballistic missiles towards sea off its east coast](https://www.aljazeera.com/news/2026/4/19/north-korea-launches-ballistic-missiles-towards-sea-off-its-east-coast)
+- [The Diplomat — South Korean President Pledges to Respect North's System in March 1st Address](https://thediplomat.com/2026/03/south-korean-president-pledges-to-respect-norths-system-in-march-1st-address/)
+- [Al Jazeera — Kim Jong Un pledges to speed up nuclear build-up over US-South Korea drills](https://www.aljazeera.com/news/2025/8/19/kim-jong-un-pledges-to-speed-up-nuclear-build-up-over-us-south-korea-drills)

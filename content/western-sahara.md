@@ -2,17 +2,24 @@
 
 ## Historical Context
 
-TODO: fill in historical background leading up to the current situation.
+Western Sahara, a former Spanish colony on Africa's northwest Atlantic coast, has been the subject of an unresolved sovereignty dispute since Spain withdrew in 1975. As Spanish rule ended, Morocco and Mauritania moved to divide the territory between themselves, while the Polisario Front — founded in 1973 to fight Spanish colonial rule, with Algerian and Libyan backing — declared an independent Sahrawi Arab Democratic Republic and fought both states. Mauritania withdrew its claim in 1979; Morocco then consolidated control over roughly 80% of the territory, building a lengthy sand berm (the "Moroccan Wall") separating Moroccan-administered areas from a smaller Polisario-controlled zone to the east. Tens of thousands of Sahrawis fled into refugee camps near Tindouf in southwestern Algeria, where over 173,000 people remain today, dependent on international aid. A UN-brokered ceasefire took effect in September 1991, establishing the MINURSO peacekeeping mission with a mandate to organize a referendum on self-determination. The referendum was never held: Morocco and the Polisario Front could never agree on who should be eligible to vote, and the process stalled for three decades. In November 2020, after Moroccan forces entered a UN-patrolled buffer zone at Guerguerat, the Polisario Front declared the 1991 ceasefire over and resumed armed action.
 
 ## Current State of Facts
 
-TODO: fill in verified, sourced facts about the current state of the conflict.
+Morocco has since 2007 proposed an autonomy plan under which Western Sahara would become a self-governing region within Morocco, with Rabat retaining control of defense, foreign affairs, and religious matters. On 31 October 2025, the UN Security Council adopted Resolution 2797, extending MINURSO's mandate to October 2026 and, for the first time, explicitly endorsing Morocco's autonomy proposal as the basis for future negotiations; the resolution passed 11–0 with China, Russia, and Pakistan abstaining, and Algeria did not participate in the vote ([Al Jazeera](https://www.aljazeera.com/news/2025/10/31/un-security-council-supports-moroccos-plan-for-western-sahara)). The United States and France both stated their support for Moroccan sovereignty over the territory; Morocco declared a public holiday to mark the vote ([BBC](https://feeds.bbci.co.uk/news/articles/cpd2yp6zny7o)). Algeria's UN ambassador said the resolution failed to reflect UN decolonization doctrine and ignored Sahrawi self-determination rights. A Secretary-General strategic review on MINURSO's future mandate was expected in April 2026, with the Council indicating continued support for negotiations grounded in the autonomy proposal. Human Rights Watch has continued to raise concerns about the state of self-determination rights and restrictions on Sahrawi activists and journalists in Moroccan-administered areas ([HRW](https://www.hrw.org/news/2026/03/25/un-western-sahara-peoples-self-determination-at-risk)).
 
 ## Contested Narratives / Common Myths
 
-TODO: fill in narratives or claims that are contested, who contests them,
-and why.
+**Sovereignty versus decolonization.** Morocco's government describes Western Sahara as an integral part of Moroccan sovereign territory ("Moroccan Sahara") and presents its autonomy plan as a serious, realistic compromise. The Polisario Front and Algeria's government maintain the territory is Africa's last unresolved decolonization case under UN law and that only a referendum including an independence option satisfies Sahrawi self-determination rights; Algeria argues that recent Security Council resolutions favoring Morocco's plan bypass this legal framework.
+
+**Who counts as "occupier."** Morocco and its allies (notably the United States since 2020 and, more recently, France) describe Moroccan administration as legitimate governance and investment in a historically underdeveloped region. The Polisario Front, along with some UN bodies and human rights organizations, characterizes Moroccan control over most of the territory as an ongoing military occupation, and objects to resource extraction (phosphates, fisheries) in the territory without Sahrawi consent.
+
+**Ceasefire status.** Rabat's official position and much international framing treat the conflict as a largely frozen, low-intensity dispute managed by MINURSO. The Polisario Front disputes this characterization, maintaining that it formally ended the 1991 ceasefire in November 2020 and considers itself at war with Morocco, though fighting since then has remained limited and largely outside major population centers.
 
 ## Sources
 
-- TODO: add linked sources, one per list item.
+- [Al Jazeera — UN Security Council supports Morocco's plan for Western Sahara](https://www.aljazeera.com/news/2025/10/31/un-security-council-supports-moroccos-plan-for-western-sahara)
+- [BBC — Morocco declares public holiday to mark UN approval of its Western Sahara plan](https://feeds.bbci.co.uk/news/articles/cpd2yp6zny7o)
+- [Human Rights Watch — UN: Western Sahara Peoples' Self-Determination at Risk](https://www.hrw.org/news/2026/03/25/un-western-sahara-peoples-self-determination-at-risk)
+- [International Crisis Group — A Window for Diplomacy in Western Sahara](https://www.crisisgroup.org/brf/middle-east-north-africa/western-sahara/b96-window-diplomacy-western-sahara)
+- [Security Council Report — Western Sahara: Vote on a Draft Resolution Renewing MINURSO's Mandate](https://www.securitycouncilreport.org/whatsinblue/2025/10/western-sahara-vote-on-a-draft-resolution-renewing-minursos-mandate-3.php)
