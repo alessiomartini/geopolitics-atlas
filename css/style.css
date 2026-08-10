@@ -86,6 +86,10 @@ h3 {
   font-family: var(--sans);
   font-size: 0.8rem;
   color: var(--text-faint);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -312,4 +316,70 @@ h3 {
     gap: 0.5rem;
     text-align: center;
   }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Sources & Methodology page                                             */
+/* ---------------------------------------------------------------------- */
+
+.tier-block {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.tier-block h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+  color: var(--accent);
+}
+
+.tier-description {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
+}
+
+.source-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.source-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.source-list li:last-child {
+  border-bottom: none;
+}
+
+.source-name a {
+  color: var(--text);
+}
+
+.source-type {
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
+}
+
+.source-notes {
+  flex-basis: 100%;
+  margin: 0.2rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-style: italic;
 }
