@@ -383,3 +383,121 @@ h3 {
   font-size: 0.85rem;
   font-style: italic;
 }
+
+/* ---------------------------------------------------------------------- */
+/* Note-to-self widget                                                    */
+/* ---------------------------------------------------------------------- */
+
+.notes-toggle {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 100;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--text);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.notes-toggle:hover,
+.notes-toggle:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.notes-panel {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 4rem;
+  z-index: 100;
+  width: min(320px, calc(100vw - 2.5rem));
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.9rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  font-family: var(--sans);
+}
+
+.notes-panel.hidden {
+  display: none;
+}
+
+.notes-panel label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.notes-panel textarea {
+  width: 100%;
+  resize: vertical;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  box-sizing: border-box;
+}
+
+.notes-panel textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.notes-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.notes-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.notes-status {
+  margin-right: auto;
+  font-size: 0.75rem;
+  color: var(--text-faint);
+}
+
+.notes-actions button {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#notes-cancel {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+#notes-submit {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: #14161a;
+  font-weight: 600;
+}
+
+#notes-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
