@@ -6,8 +6,7 @@
  * (Cloudflare dashboard / wrangler / MCP), by design.
  */
 (function () {
-  // Set after the first `wrangler deploy` (see worker/README.md).
-  const WORKER_URL = "https://geopolitics-atlas-notes.WORKER_SUBDOMAIN.workers.dev/notes";
+  const WORKER_URL = "https://geopolitics-atlas-notes.alemarti-2001.workers.dev/notes";
 
   const toggle = document.createElement("button");
   toggle.type = "button";
