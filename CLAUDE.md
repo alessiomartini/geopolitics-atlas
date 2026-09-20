@@ -2,25 +2,32 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Project
+
+Static geopolitics atlas: per-conflict content, map data, front-end
+JavaScript, and a Cloudflare Worker for the notes widget.
+
 ## Working across sessions
 
 This repo is worked on by independent Claude Code sessions over time, not
 one continuous conversation. Coherence across sessions is maintained by
 three files, not by memory:
 
-- **Before starting non-trivial work**, read `FUTURE-ARCHITECTURE.md` —
-  it holds in-progress items, known rough edges, and pending ideas that a
-  fresh session has no other way to know about.
+- **Before starting non-trivial work**, read `README.md` and
+  `FUTURE-ARCHITECTURE.md` — the latter holds in-progress items, known
+  rough edges, and pending ideas that a fresh session has no other way to
+  know about. Also read the relevant `content`/`data`/script files
+  before editing them.
 - **Before stopping**, update `FUTURE-ARCHITECTURE.md`: move what you
   finished out of "In progress", add anything you noticed but didn't fix
   under "Known small issues" or "Ideas not yet built", and leave enough
   context on anything unfinished that a cold session can pick it up.
 - **Keep `README.md`'s "Status" section accurate** if you change the
   conflict roster or a major deployed piece (e.g. the notes worker).
-- **Only edit this file (`CLAUDE.md`) when the actual architecture
-  changes** — a new moving part, a changed convention, a new command.
-  Routine content edits (writing/updating a conflict's prose) don't
-  belong here.
+- **Only edit this file (`CLAUDE.md`) when the actual architecture or a
+  standing rule changes** — a new moving part, a changed convention, a
+  new command. Routine content edits (writing/updating a conflict's
+  prose) don't belong here.
 
 ## Commands
 
@@ -45,6 +52,17 @@ HTML/CSS/JS deployed as-is, with no root-level `package.json`.
   (`wrangler dev`).
 - No test suite exists for the Worker or the front end.
 
+## Verification
+
+- Preview with a local HTTP server (see Commands) and test the affected
+  page in a browser — don't rely on reading the code alone.
+- Check the browser console and the worker/data-loading path for errors.
+- Validate changed JSON/JS data files against the existing format and
+  against representative entries; do not silently alter historical facts
+  or source attribution.
+- Inspect the diff and report what you verified (browser check, data
+  validation) before committing.
+
 ## Architecture
 
 ### Static site, zero build step
@@ -52,6 +70,8 @@ Everything outside `worker/` deploys to GitHub Pages exactly as it sits
 in the repo — no bundler, no transpilation. `worker/` is a separate
 Node/wrangler project, deployed independently (see Commands above), and
 is the *only* part of this repo with a `package.json` or dependencies.
+Do not add a build system or new dependencies without explicit approval
+— that includes to `worker/`, not just the static site.
 
 ### Content, template, and registry are three files that must agree by convention
 Nothing in the repo enforces this link — it's worth understanding because
@@ -79,7 +99,8 @@ an H2 heading in the markdown doesn't exactly match (mod case) the
 browser console — not a build failure. There is no CI check for this (see
 `FUTURE-ARCHITECTURE.md` for a proposed one). When adding or renaming a
 conflict, update all three files together; see README's "Adding a new
-conflict".
+conflict". Keep content in these data files rather than hardcoding it
+into templates.
 
 ### The source-tier framework is the site's thesis, not a footnote
 `data/sources.js` defines two independent axes applied to every
@@ -152,3 +173,6 @@ output consistent rather than each page reading like a different author:
   claims say so inline (see phrasing like "as of this writing" in
   existing pages). There's no automated staleness tracking yet — see
   `FUTURE-ARCHITECTURE.md`.
+- Do not silently alter historical facts, figures, or source attribution
+  in existing content — a factual correction is a deliberate edit, not a
+  side effect of a rewrite.
