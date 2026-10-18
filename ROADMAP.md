@@ -11,7 +11,7 @@ Unico file per todo, idee, decisioni e diario, letto da Projects Overview
 - [x] Widget per le note + Worker/D1
 
 ## Da fare
-- [ ] Smistare le note in attesa nel D1
+- [ ] Smistare le note in attesa (ora nel D1 condiviso `site-notes`, `site = 'geopolitics-atlas'`)
 - [ ] Indicatore "ultima verifica" per ogni conflitto
 - [ ] Vista timeline per conflitto
 - [x] Controllo automatico della coerenza tra `conflicts.js`, pagine e fonti (`scripts/check-consistency.mjs` + workflow CI)
@@ -76,7 +76,7 @@ privacy choice, not a gap to casually close by adding a public `GET
 
 #### Cross-site feedback consolidation (idea, not decided)
 
-- [ ] Cross-site feedback consolidation (idea, not decided)
+- [x] Cross-site feedback consolidation (fatto il 2026-10-19: backend unico `site-notes`)
 This site, like `ear-training`, has its own dedicated Cloudflare D1 +
 Worker for its notes widget (here: `worker/schema.sql`, table `notes`,
 Worker in `worker/src`). Several of Alessio's other sites
@@ -97,6 +97,8 @@ history per site would need migrating. No action needed now — revisit if
 maintaining N separate D1+Worker pairs becomes a real burden.
 
 ## Decisioni e cose provate
+
+- 2026-10-19: il widget scrive nel backend unico `site-notes` (repo `alessiomartini/site-notes`); tolti `worker/` e i workflow *Deploy Notes Worker* / *Read Notes*. Il vecchio worker `geopolitics-atlas-notes` e il suo D1 vanno spenti da Alessio dopo la migrazione delle note.
 
 - 2026-10-18: `scripts/check-consistency.mjs` (solo Node built-in, dati caricati con `vm`) fallisce su: id/percorsi del registro, file orfani, `CONTENT_FILE`, `data-section` e H2 vs `_template.md`, meta `noindex`. Il controllo "dominio citato presente in `sources.js`" e "citazione inline presente nella sezione Sources" sono volutamente solo warning: sull'albero attuale i primi sono 79 (circa 48 domini non classificati), quindi come errori la CI sarebbe rossa. Match per hostname (senza `www.`, sottodomini accettati). Limite: le URL con parentesi annidate oltre un livello non sono analizzate perfettamente.
 
@@ -129,7 +131,7 @@ here at most (see "Recently resolved"), not a re-description.
   through it. This pass had no authorized Cloudflare access in-session,
   so those notes were not read and are not reflected anywhere below. The
   next session with Cloudflare MCP/dashboard access (or that runs the
-  *Read Notes* GitHub Action) should pull them, triage each into the
+  `site-notes` README query, `site = 'geopolitics-atlas'`) should pull them, triage each into the
   right section of this file, and remove this item.
 
 ### Known small issues
@@ -161,6 +163,7 @@ here at most (see "Recently resolved"), not a re-description.
   `sources.html`) added as the site's citation methodology. `5c7f43b`.
 
 ## Log
+- 2026-10-19: note spostate nel backend unico `site-notes`
 - 2026-10-18: 🤖 aggiunto controllo di coerenza registro/pagine/contenuti/fonti (`scripts/check-consistency.mjs`) con workflow CI in sola lettura; sull'albero attuale 0 errori e 79 warning di fonti non classificate
 - 2026-10-18: aggiunte le idee da IDEE.md (protocollo unico)
 - 2026-10-18: FUTURE-ARCHITECTURE.md unito in ROADMAP.md (protocollo unico)

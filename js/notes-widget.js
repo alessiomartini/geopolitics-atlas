@@ -1,12 +1,13 @@
 /**
  * Floating "note to self" widget, present on every page. Lets the site
  * owner jot comments/suggestions/ideas while browsing; each note is
- * POSTed to the geopolitics-atlas-notes Worker and stored in D1. There
+ * POSTed to the shared site-notes Worker (repo alessiomartini/site-notes)
+ * and stored in its D1 with site = "geopolitics-atlas". There
  * is no in-site list of past notes — they're read back separately
  * (Cloudflare dashboard / wrangler / MCP), by design.
  */
 (function () {
-  const WORKER_URL = "https://geopolitics-atlas-notes.alemarti-2001.workers.dev/notes";
+  const WORKER_URL = "https://site-notes.alemarti-2001.workers.dev/geopolitics-atlas/notes";
 
   const toggle = document.createElement("button");
   toggle.type = "button";

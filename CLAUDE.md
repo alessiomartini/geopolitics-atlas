@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project
 
 Static geopolitics atlas: per-conflict content, map data, front-end
-JavaScript, and a Cloudflare Worker for the notes widget.
+JavaScript, and a notes widget that posts to the shared `site-notes` Worker.
 
 ## Working across sessions
 
@@ -39,19 +39,9 @@ HTML/CSS/JS deployed as-is, with no root-level `package.json`.
   then open `http://localhost:8000/`. Required because `page-loader.js`
   uses `fetch()` to load markdown, which browsers block under a
   `file://` URL.
-- **Deploy the notes Worker**: GitHub Actions → *Deploy Notes Worker*
-  (`.github/workflows/deploy-notes-worker.yml`, `workflow_dispatch` only).
-  Creates the D1 database if it doesn't already exist, substitutes its id
-  into `worker/wrangler.jsonc`, applies `worker/schema.sql`
-  (idempotent — `CREATE TABLE IF NOT EXISTS`), then `wrangler deploy`.
-  Needs the `CLOUDFLARE_API_TOKEN` repo secret.
-- **Read back saved notes**: GitHub Actions → *Read Notes*
-  (`.github/workflows/read-notes.yml`, `workflow_dispatch` only). Prints
-  every row from D1 to the job log — a fallback for when the Cloudflare
-  MCP connector isn't available in-session. Read-only, no side effects.
-- **Worker local dev**: `cd worker && npm install && npm run dev`
-  (`wrangler dev`).
-- No test suite exists for the Worker or the front end.
+- **Read saved notes**: they live in the shared `site-notes` D1 (repo
+  `alessiomartini/site-notes`, `site = 'geopolitics-atlas'`); see its README.
+- No test suite exists for the front end.
 
 ## Verification
 
@@ -67,12 +57,9 @@ HTML/CSS/JS deployed as-is, with no root-level `package.json`.
 ## Architecture
 
 ### Static site, zero build step
-Everything outside `worker/` deploys to GitHub Pages exactly as it sits
-in the repo — no bundler, no transpilation. `worker/` is a separate
-Node/wrangler project, deployed independently (see Commands above), and
-is the *only* part of this repo with a `package.json` or dependencies.
-Do not add a build system or new dependencies without explicit approval
-— that includes to `worker/`, not just the static site.
+Everything deploys to GitHub Pages exactly as it sits in the repo — no
+bundler, no transpilation, no `package.json`. Do not add a build system
+or new dependencies without explicit approval.
 
 ### Content, template, and registry are three files that must agree by convention
 Nothing in the repo enforces this link — it's worth understanding because
@@ -118,28 +105,14 @@ SOURCES.md" — no such file exists; see `ROADMAP.md`.) When
 writing or editing conflict content, the rules on `sources.html` are
 normative, not just the tier list.
 
-### Notes widget + Cloudflare Worker (write-only by design)
+### Notes widget (write-only by design)
 `js/notes-widget.js` is injected on every page (`index.html`,
-`sources.html`, every `conflicts/*.html`) and POSTs free-text notes to a
-Cloudflare Worker (`worker/src/index.js`) backed by D1
-(`worker/schema.sql`: a single `notes` table). The Worker deliberately
-exposes **no read endpoint** — notes are the site owner's private scratch
-list and are read back only via the Cloudflare MCP connector, dashboard,
-`wrangler d1 execute`, or the *Read Notes* Action, never over the public
-site. If that ever changes, it should stay owner-only (see
-`ROADMAP.md`) — the write-only design is intentional, not an
-oversight.
-
-CORS is a hardcoded origin allowlist in `worker/src/index.js`
-(`ALLOWED_ORIGINS`) — update it there if the site's deployed origin
-changes. A hidden honeypot field (`website`) makes bot submissions return
-a fake success instead of an error, so scripted spam doesn't learn to
-route around it.
-
-Both Worker-related GitHub Actions workflows are `workflow_dispatch`
-only, never triggered on push — they touch real Cloudflare
-infrastructure (D1 creation, Worker deploy) and must not fire on every
-commit to the site content.
+`sources.html`, every `conflicts/*.html`) and POSTs free-text notes to the
+shared `site-notes` Worker (`https://site-notes.alemarti-2001.workers.dev/geopolitics-atlas/notes`,
+repo `alessiomartini/site-notes`, one D1 for all of Alessio's sites). Reading
+needs the owner's token, never the public site. A hidden honeypot field
+(`website`) makes bot submissions return a fake success. The origin
+allowlist lives in that repo's `src/index.js`.
 
 ### Privacy posture
 `robots.txt` disallows everything, and every page sets

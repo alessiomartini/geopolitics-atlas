@@ -12,10 +12,9 @@ for public reach.
 
 All 22 conflicts currently listed in `data/conflicts.js` have complete
 four-section write-ups (no stub/TODO content remains). A "+ Note" widget
-is deployed site-wide, posting free-text notes to a Cloudflare
-Worker + D1 backend (`worker/`) for the site owner to read back later —
-see `CLAUDE.md` for how that piece works and `ROADMAP.md`
-for what's still pending on it.
+is deployed site-wide, posting free-text notes to the shared
+`site-notes` backend (one Worker + D1 for all of Alessio's sites, repo
+`alessiomartini/site-notes`) for the site owner to read back later.
 
 This project is edited across multiple independent working sessions over
 time, sometimes by different Claude Code instances. `CLAUDE.md` and
@@ -24,7 +23,7 @@ time, sometimes by different Claude Code instances. `CLAUDE.md` and
 
 ## Design principles
 
-- **No build step, ever.** Every file outside `worker/` is deployed to
+- **No build step, ever.** Every file is deployed to
   GitHub Pages exactly as it sits in the repo. No bundler, no
   transpilation, nothing to run before pushing.
 - **Content is separate from its template, and both are separate from
@@ -44,8 +43,7 @@ time, sometimes by different Claude Code instances. `CLAUDE.md` and
   or more certain than the sourcing behind it supports.
 - **The notes widget is write-only on purpose.** It has no read endpoint
   and no in-site list of past notes; they're the owner's private scratch
-  list, read back out-of-band (Cloudflare dashboard, `wrangler`, MCP, or
-  the "Read Notes" GitHub Action).
+  list, read back out-of-band from the shared `site-notes` D1 (see that repo's README).
 
 ## Structure
 
@@ -55,15 +53,14 @@ css/style.css            Shared styles for all pages
 js/map.js                Renders the map (d3 + world-atlas topojson) and marker tooltips/clicks
 js/page-loader.js        Fetches a conflict's markdown and renders it into the page template
 js/sources.js            Renders the source-tier directory on sources.html
-js/notes-widget.js       Site-wide "+ Note" widget, posts to the Cloudflare Worker below
+js/notes-widget.js       Site-wide "+ Note" widget, posts to the shared site-notes Worker
 data/conflicts.js        Registry of conflicts shown on the map (id, title, summary, coordinates, links)
 data/sources.js          Source reliability tiers + the per-outlet registry
 conflicts/*.html         One page per conflict, sharing a common template
 content/*.md             Markdown source for each conflict's write-up
 content/_template.md     Starting point for new conflicts
 sources.html             Source tiers + citation-rules methodology page
-worker/                  Cloudflare Worker + D1 schema backing the notes widget (see CLAUDE.md)
-.github/workflows/       Manual (workflow_dispatch-only) deploy/read jobs for the Worker
+.github/workflows/       CI consistency check
 ```
 
 ## Adding a new conflict
