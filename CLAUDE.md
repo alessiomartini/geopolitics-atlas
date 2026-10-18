@@ -34,6 +34,7 @@ three files, not by memory:
 There is no build, lint, or test tooling in this repo — it's plain
 HTML/CSS/JS deployed as-is, with no root-level `package.json`.
 
+- **Consistency check**: `node scripts/check-consistency.mjs` (no deps; also run by CI on push/PR) — run it after adding or editing a conflict.
 - **Preview locally**: `python3 -m http.server 8000` from the repo root,
   then open `http://localhost:8000/`. Required because `page-loader.js`
   uses `fetch()` to load markdown, which browsers block under a

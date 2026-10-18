@@ -83,6 +83,19 @@ That's it — the homepage map and the new page pick up automatically.
 Follow the citation rules on `sources.html` when writing the content, and
 add any newly-cited outlet to `data/sources.js` with a tier.
 
+## Consistency check
+
+```
+node scripts/check-consistency.mjs
+```
+
+Dependency-free (Node built-ins only). Verifies that `data/conflicts.js`,
+`conflicts/<id>.html` and `content/<id>.md` agree (paths, `CONTENT_FILE`,
+`data-section` vs. `##` headings, `noindex` meta), and reports cited
+outlets missing from `data/sources.js` and inline citations missing from
+the page's Sources section (these two are warnings). Exits 1 on errors;
+runs in CI via `.github/workflows/check-consistency.yml`.
+
 ## Previewing locally
 
 The site uses `fetch()` to load markdown content, which most browsers
