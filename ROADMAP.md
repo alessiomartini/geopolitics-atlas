@@ -98,7 +98,7 @@ maintaining N separate D1+Worker pairs becomes a real burden.
 
 ## Decisioni e cose provate
 
-- 2026-10-19: il widget scrive nel backend unico `site-notes` (repo `alessiomartini/site-notes`); tolti `worker/` e i workflow *Deploy Notes Worker* / *Read Notes*. Il vecchio worker `geopolitics-atlas-notes` e il suo D1 vanno spenti da Alessio dopo la migrazione delle note.
+- 2026-10-19: il widget scrive nel backend unico `site-notes` (repo `alessiomartini/site-notes`); tolti `worker/` e i workflow *Deploy Notes Worker* / *Read Notes*. Il vecchio worker `geopolitics-atlas-notes` e il suo D1 vanno spenti da Alessio dopo la migrazione delle note.; le note mandano l'autore (`?sono-alessio` segna il browser di Alessio, le altre sono di visitatori)
 
 - 2026-10-18: `scripts/check-consistency.mjs` (solo Node built-in, dati caricati con `vm`) fallisce su: id/percorsi del registro, file orfani, `CONTENT_FILE`, `data-section` e H2 vs `_template.md`, meta `noindex`. Il controllo "dominio citato presente in `sources.js`" e "citazione inline presente nella sezione Sources" sono volutamente solo warning: sull'albero attuale i primi sono 79 (circa 48 domini non classificati), quindi come errori la CI sarebbe rossa. Match per hostname (senza `www.`, sottodomini accettati). Limite: le URL con parentesi annidate oltre un livello non sono analizzate perfettamente.
 
