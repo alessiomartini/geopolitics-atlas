@@ -14,7 +14,8 @@ Unico file per todo, idee, decisioni e diario, letto da Projects Overview
 - [ ] Smistare le note in attesa nel D1
 - [ ] Indicatore "ultima verifica" per ogni conflitto
 - [ ] Vista timeline per conflitto
-- [ ] Controllo automatico della coerenza tra `conflicts.js`, pagine e fonti
+- [x] Controllo automatico della coerenza tra `conflicts.js`, pagine e fonti (`scripts/check-consistency.mjs` + workflow CI)
+- [ ] Aggiungere a `data/sources.js` (con tier) le ~48 testate/domini citati nei contenuti ma assenti (es. news.un.org, cnn.com, britannica.com, feeds.bbci.co.uk, ohchr.org, euronews.com): oggi sono solo warning del check; poi promuoverli a errori
 
 ## Idee
 
@@ -97,6 +98,8 @@ maintaining N separate D1+Worker pairs becomes a real burden.
 
 ## Decisioni e cose provate
 
+- 2026-10-18: `scripts/check-consistency.mjs` (solo Node built-in, dati caricati con `vm`) fallisce su: id/percorsi del registro, file orfani, `CONTENT_FILE`, `data-section` e H2 vs `_template.md`, meta `noindex`. Il controllo "dominio citato presente in `sources.js`" e "citazione inline presente nella sezione Sources" sono volutamente solo warning: sull'albero attuale i primi sono 79 (circa 48 domini non classificati), quindi come errori la CI sarebbe rossa. Match per hostname (senza `www.`, sottodomini accettati). Limite: le URL con parentesi annidate oltre un livello non sono analizzate perfettamente.
+
 Standing scratchpad for work that spans sessions: what's in progress,
 known rough edges, and ideas not yet built. This is not a changelog —
 git history is the changelog, and finished work should be a short pointer
@@ -158,6 +161,7 @@ here at most (see "Recently resolved"), not a re-description.
   `sources.html`) added as the site's citation methodology. `5c7f43b`.
 
 ## Log
+- 2026-10-18: 🤖 aggiunto controllo di coerenza registro/pagine/contenuti/fonti (`scripts/check-consistency.mjs`) con workflow CI in sola lettura; sull'albero attuale 0 errori e 79 warning di fonti non classificate
 - 2026-10-18: aggiunte le idee da IDEE.md (protocollo unico)
 - 2026-10-18: FUTURE-ARCHITECTURE.md unito in ROADMAP.md (protocollo unico)
 - 2026-10-15: creata la roadmap per Projects Overview
