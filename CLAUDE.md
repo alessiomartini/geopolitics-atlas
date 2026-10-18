@@ -14,11 +14,11 @@ one continuous conversation. Coherence across sessions is maintained by
 three files, not by memory:
 
 - **Before starting non-trivial work**, read `README.md` and
-  `FUTURE-ARCHITECTURE.md` — the latter holds in-progress items, known
+  `ROADMAP.md` — the latter holds in-progress items, known
   rough edges, and pending ideas that a fresh session has no other way to
   know about. Also read the relevant `content`/`data`/script files
   before editing them.
-- **Before stopping**, update `FUTURE-ARCHITECTURE.md`: move what you
+- **Before stopping**, update `ROADMAP.md`: move what you
   finished out of "In progress", add anything you noticed but didn't fix
   under "Known small issues" or "Ideas not yet built", and leave enough
   context on anything unfinished that a cold session can pick it up.
@@ -97,7 +97,7 @@ an H2 heading in the markdown doesn't exactly match (mod case) the
 `data-section` attribute in the HTML, the result is a silent
 "TODO: content not yet written for this section" or a failed fetch in the
 browser console — not a build failure. There is no CI check for this (see
-`FUTURE-ARCHITECTURE.md` for a proposed one). When adding or renaming a
+`ROADMAP.md` for a proposed one). When adding or renaming a
 conflict, update all three files together; see README's "Adding a new
 conflict". Keep content in these data files rather than hardcoding it
 into templates.
@@ -113,7 +113,7 @@ rather than one being silently picked, that an involved party's own
 claims are attributed by name and belong under "Contested Narratives"
 unless third-party corroborated — live as prose on `sources.html`
 itself. (A stale comment at the top of `data/sources.js` still says "see
-SOURCES.md" — no such file exists; see `FUTURE-ARCHITECTURE.md`.) When
+SOURCES.md" — no such file exists; see `ROADMAP.md`.) When
 writing or editing conflict content, the rules on `sources.html` are
 normative, not just the tier list.
 
@@ -126,7 +126,7 @@ exposes **no read endpoint** — notes are the site owner's private scratch
 list and are read back only via the Cloudflare MCP connector, dashboard,
 `wrangler d1 execute`, or the *Read Notes* Action, never over the public
 site. If that ever changes, it should stay owner-only (see
-`FUTURE-ARCHITECTURE.md`) — the write-only design is intentional, not an
+`ROADMAP.md`) — the write-only design is intentional, not an
 oversight.
 
 CORS is a hardcoded origin allowlist in `worker/src/index.js`
@@ -172,21 +172,24 @@ output consistent rather than each page reading like a different author:
 - Content is written "current as of" a point in time, and fast-moving
   claims say so inline (see phrasing like "as of this writing" in
   existing pages). There's no automated staleness tracking yet — see
-  `FUTURE-ARCHITECTURE.md`.
+  `ROADMAP.md`.
 - Do not silently alter historical facts, figures, or source attribution
   in existing content — a factual correction is a deliberate edit, not a
   side effect of a rewrite.
 
-## Roadmap e progressi
+## Roadmap, idee e progressi
 
-Questo progetto è tracciato in https://alessiomartini.github.io/projects-overview/ tramite il file `ROADMAP.md`
-nella root del repo. Mantienilo aggiornato:
+`ROADMAP.md` nella root è l'**unico** file per todo, idee, decisioni e diario del progetto
+(niente `FUTURE-ARCHITECTURE.md`, `IDEE.md`, `TODO.md`). È letto da https://alessiomartini.github.io/projects-overview/.
+Sezioni: `## <fase>` (checkbox, contano nella percentuale), `## Idee` (checkbox, non contano),
+`## Decisioni e cose provate` (prosa: scartato/rimandato e perché, provato e annullato, limiti e bug noti), `## Log`.
 
 - Alla fine di ogni sessione di lavoro (prima del commit finale), aggiorna `ROADMAP.md`:
   - spunta (`- [x]`) i punti completati in questa sessione;
-  - aggiungi come `- [ ]` i nuovi compiti emersi, nella fase giusta (titoli `##`);
-  - aggiungi in cima alla sezione `## Log` una riga `- AAAA-MM-GG: <cosa è stato fatto, in una frase>`
+  - aggiungi come `- [ ]` i nuovi compiti nella fase giusta, e le idee non decise in `## Idee`;
+  - annota in `## Decisioni e cose provate` ciò che è stato scartato, rimandato o annullato, col perché;
+  - aggiungi in cima a `## Log` una riga `- AAAA-MM-GG: <cosa è stato fatto, in una frase>`
     (se esiste già una riga con la data di oggi, estendila invece di crearne un'altra).
 - Non riscrivere né riordinare le voci esistenti senza motivo; non cancellare le voci completate.
-- Se `ROADMAP.md` non esiste, crealo con le fasi `## ...`, le checkbox e una sezione `## Log`.
+- Se `ROADMAP.md` non esiste, crealo da `templates/ROADMAP.md` di projects-overview.
 - Includi l'aggiornamento di `ROADMAP.md` nello stesso commit del lavoro.

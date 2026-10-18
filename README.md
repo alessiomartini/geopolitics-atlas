@@ -14,12 +14,12 @@ All 22 conflicts currently listed in `data/conflicts.js` have complete
 four-section write-ups (no stub/TODO content remains). A "+ Note" widget
 is deployed site-wide, posting free-text notes to a Cloudflare
 Worker + D1 backend (`worker/`) for the site owner to read back later —
-see `CLAUDE.md` for how that piece works and `FUTURE-ARCHITECTURE.md`
+see `CLAUDE.md` for how that piece works and `ROADMAP.md`
 for what's still pending on it.
 
 This project is edited across multiple independent working sessions over
 time, sometimes by different Claude Code instances. `CLAUDE.md` and
-`FUTURE-ARCHITECTURE.md` exist specifically to keep that coherent — see
+`ROADMAP.md` exist specifically to keep that coherent — see
 "Working across sessions" below.
 
 ## Design principles
@@ -109,6 +109,6 @@ each one rediscovering context or quietly drifting from prior decisions:
   Claude Code specifically: commands, how the moving parts fit together,
   and editorial conventions for content edits. Update it when the
   architecture itself changes, not for routine content edits.
-- **`FUTURE-ARCHITECTURE.md`** — the standing backlog: work in progress,
+- **`ROADMAP.md`** — the standing backlog: work in progress,
   known rough edges, and ideas not yet built. Read it before starting
   non-trivial work; update it before stopping.
