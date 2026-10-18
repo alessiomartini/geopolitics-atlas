@@ -18,6 +18,8 @@ Unico file per todo, idee, decisioni e diario, letto da Projects Overview
 
 ## Idee
 
+- [ ] Studiare politics e geopolitics (corsi, letture) a supporto dell'atlante
+
 ### Ideas not yet built
 
 #### Content staleness tracking
@@ -156,5 +158,6 @@ here at most (see "Recently resolved"), not a re-description.
   `sources.html`) added as the site's citation methodology. `5c7f43b`.
 
 ## Log
+- 2026-10-18: aggiunte le idee da IDEE.md (protocollo unico)
 - 2026-10-18: FUTURE-ARCHITECTURE.md unito in ROADMAP.md (protocollo unico)
 - 2026-10-15: creata la roadmap per Projects Overview
