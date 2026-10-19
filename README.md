@@ -74,7 +74,14 @@ sources.html             Source tiers + citation-rules methodology page
    inline script variable to point at `../content/<id>.md`.
 3. Add an entry to `data/conflicts.js` with a unique `id`, `title`,
    short `summary`, `coordinates` (`[longitude, latitude]`) for the map
-   marker, and the relative `page`/`content` paths.
+   marker, the relative `page`/`content` paths, and `lastVerified`
+   (`"YYYY-MM-DD"`, required): the date the content was last checked
+   against its sources. It is shown under the page title and in the map
+   tooltip, flagged "may be out of date" after 90 days
+   (`STALE_AFTER_DAYS` in `data/conflicts.js`). Set it to today for a new
+   page and bump it whenever you re-verify a page, not for typo fixes.
+   Conflict pages also need `<script src="../data/conflicts.js">` before
+   `page-loader.js` (already in the copied page).
 
 That's it — the homepage map and the new page pick up automatically.
 Follow the citation rules on `sources.html` when writing the content, and
@@ -88,7 +95,7 @@ node scripts/check-consistency.mjs
 
 Dependency-free (Node built-ins only). Verifies that `data/conflicts.js`,
 `conflicts/<id>.html` and `content/<id>.md` agree (paths, `CONTENT_FILE`,
-`data-section` vs. `##` headings, `noindex` meta), and reports cited
+`data-section` vs. `##` headings, `noindex` meta, valid `lastVerified`), and reports cited
 outlets missing from `data/sources.js` and inline citations missing from
 the page's Sources section (these two are warnings). Exits 1 on errors;
 runs in CI via `.github/workflows/check-consistency.yml`.

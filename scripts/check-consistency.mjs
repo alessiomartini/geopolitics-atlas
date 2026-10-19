@@ -35,6 +35,13 @@ for (const c of CONFLICTS) {
   ids.add(c.id);
   if (c.page !== `conflicts/${c.id}.html`) err(`conflicts.js[${c.id}]: page "${c.page}" does not match id (expected conflicts/${c.id}.html)`);
   if (c.content !== `content/${c.id}.md`) err(`conflicts.js[${c.id}]: content "${c.content}" does not match id (expected content/${c.id}.md)`);
+  const validDate = (s) => typeof s === "string" && /^\d{4}-\d{2}-\d{2}$/.test(s) &&
+    !isNaN(new Date(s + "T00:00:00Z")) && new Date(s + "T00:00:00Z").toISOString().slice(0, 10) === s;
+  if (!validDate(c.lastVerified)) {
+    err(`conflicts.js[${c.id}]: lastVerified must be a valid "YYYY-MM-DD" date (got ${JSON.stringify(c.lastVerified)})`);
+  } else if (c.lastVerified > new Date().toISOString().slice(0, 10)) {
+    err(`conflicts.js[${c.id}]: lastVerified ${c.lastVerified} is in the future`);
+  }
   if (!existsSync(join(root, c.page))) err(`conflicts.js[${c.id}]: page file missing: ${c.page}`);
   if (!existsSync(join(root, c.content))) err(`conflicts.js[${c.id}]: content file missing: ${c.content}`);
 }
@@ -67,6 +74,10 @@ for (const id of ids) {
   const cf = html.match(/CONTENT_FILE\s*=\s*["']([^"']+)["']/);
   if (!cf) err(`${pagePath}: CONTENT_FILE not defined`);
   else if (cf[1] !== `../${mdPath}`) err(`${pagePath}: CONTENT_FILE is "${cf[1]}", expected "../${mdPath}"`);
+
+  if (!/<script\s+src=["']\.\.\/data\/conflicts\.js["']/.test(html)) {
+    err(`${pagePath}: missing <script src="../data/conflicts.js"> (needed for the last-verified note)`);
+  }
 
   const sections = [...html.matchAll(/data-section=["']([^"']+)["']/g)].map((m) => m[1]);
   const secN = sections.map(norm);

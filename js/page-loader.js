@@ -40,6 +40,8 @@
       document.title = `${title} — Geopolitics Atlas`;
     }
 
+    renderLastVerified();
+
     sectionEls.forEach((el) => {
       const key = normalize(el.getAttribute("data-section"));
       const raw = sections[key];
@@ -49,6 +51,21 @@
         el.innerHTML = '<p class="todo-note">TODO: content not yet written for this section.</p>';
       }
     });
+  }
+
+  // Shows the conflict's "last verified" date under the title, flagged when
+  // older than STALE_AFTER_DAYS. The conflict is found by its content path.
+  function renderLastVerified() {
+    if (!titleEl || typeof CONFLICTS === "undefined") return;
+    const conflict = CONFLICTS.find((c) => "../" + c.content === CONTENT_FILE);
+    if (!conflict) return;
+    const info = lastVerifiedInfo(conflict);
+    const note = document.createElement("p");
+    note.className = "last-verified" + (info.stale ? " stale" : "");
+    note.textContent = info.stale
+      ? `Last verified ${info.date} (${info.days} days ago) — may be out of date`
+      : `Last verified ${info.date}`;
+    titleEl.insertAdjacentElement("afterend", note);
   }
 
   function normalize(str) {

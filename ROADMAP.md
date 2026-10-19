@@ -12,7 +12,7 @@ Unico file per todo, idee, decisioni e diario, letto da Projects Overview
 
 ## Da fare
 - [ ] Smistare le note in attesa (ora nel D1 condiviso `site-notes`, `site = 'geopolitics-atlas'`)
-- [ ] Indicatore "ultima verifica" per ogni conflitto
+- [x] Indicatore "ultima verifica" per ogni conflitto
 - [ ] Vista timeline per conflitto
 - [x] Controllo automatico della coerenza tra `conflicts.js`, pagine e fonti (`scripts/check-consistency.mjs` + workflow CI)
 - [x] Aggiungere a `data/sources.js` (con tier) le ~48 testate/domini citati nei contenuti ma assenti (es. news.un.org, cnn.com, britannica.com, feeds.bbci.co.uk, ohchr.org, euronews.com): oggi sono solo warning del check; poi promuoverli a errori
@@ -98,6 +98,7 @@ maintaining N separate D1+Worker pairs becomes a real burden.
 
 ## Decisioni e cose provate
 
+- 2026-10-19: "ultima verifica" = campo `lastVerified: "YYYY-MM-DD"` in `data/conflicts.js` (obbligatorio, controllato da `check-consistency.mjs`), mostrato sotto il titolo e nel tooltip della mappa, evidenziato "may be out of date" oltre 90 giorni (`STALE_AFTER_DAYS`). Valori iniziali non inventati: data dell'ultimo commit che ha toccato `content/<id>.md` (tutte 2026-08-10, quindi nessuna ancora oltre soglia). Le pagine conflitto ora caricano anche `data/conflicts.js` (il check lo richiede). Limite: è una data manuale, da aggiornare a ogni ri-verifica vera, non per refusi; non c'è ancora un report automatico delle pagine più vecchie (resta l'idea "Content staleness tracking" per quella parte).
 - 2026-10-19: il widget scrive nel backend unico `site-notes` (repo `alessiomartini/site-notes`); tolti `worker/` e i workflow *Deploy Notes Worker* / *Read Notes*. Il vecchio worker `geopolitics-atlas-notes` e il suo D1 vanno spenti da Alessio dopo la migrazione delle note.; le note mandano l'autore (`?sono-alessio` segna il browser di Alessio, le altre sono di visitatori); installabile come app a sé dal telefono (manifest con nome, icona e perimetro propri)
 
 - 2026-10-18: `scripts/check-consistency.mjs` (solo Node built-in, dati caricati con `vm`) fallisce su: id/percorsi del registro, file orfani, `CONTENT_FILE`, `data-section` e H2 vs `_template.md`, meta `noindex`. Il controllo "dominio citato presente in `sources.js`" e "citazione inline presente nella sezione Sources" sono volutamente solo warning: sull'albero attuale i primi sono 79 (circa 48 domini non classificati), quindi come errori la CI sarebbe rossa. Match per hostname (senza `www.`, sottodomini accettati). Limite: le URL con parentesi annidate oltre un livello non sono analizzate perfettamente.
@@ -165,6 +166,7 @@ here at most (see "Recently resolved"), not a re-description.
 - 2026-10-19: classificate 43 fonti nuove in `data/sources.js` (+ campo opzionale `domains` per alias, usato da `feeds.bbci.co.uk` -> BBC); il dominio citato mancante è ora un errore del check (0 errori, 0 warning). Tier prudenti e provvisori, da rivedere: testate generaliste (CNN, NBC, CBS, PBS, Euronews, Bloomberg...) in B, non A; UN/OHCHR/Lancet/ACAPS e think tank in C (come Crisis Group), con nota di attribuzione per quelli con orientamento dichiarato (FDD, Critical Threats, Africa Center, CTC West Point); siti di ministeri/ambasciate cinesi e pakistane e DHS in D (parti coinvolte), come CRS, Commons Library e PCA; Britannica e SAHO terziarie; outlet regionali (Caspian News, Middle East Eye, Neos Kosmos, Cyprus Mail) in B con nota di cautela.
 
 ## Log
+- 2026-10-19: 🤖 aggiunto `lastVerified` per conflitto (pagina, tooltip della mappa, avviso oltre 90 giorni, controllo di coerenza, README)
 - 2026-10-19: note spostate nel backend unico `site-notes`; 🤖 classificate le 43 fonti mancanti in `data/sources.js` e promosso il controllo del dominio citato da warning a errore
 - 2026-10-18: 🤖 aggiunto controllo di coerenza registro/pagine/contenuti/fonti (`scripts/check-consistency.mjs`) con workflow CI in sola lettura; sull'albero attuale 0 errori e 79 warning di fonti non classificate
 - 2026-10-18: aggiunte le idee da IDEE.md (protocollo unico)
