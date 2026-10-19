@@ -15,7 +15,7 @@ Unico file per todo, idee, decisioni e diario, letto da Projects Overview
 - [ ] Indicatore "ultima verifica" per ogni conflitto
 - [ ] Vista timeline per conflitto
 - [x] Controllo automatico della coerenza tra `conflicts.js`, pagine e fonti (`scripts/check-consistency.mjs` + workflow CI)
-- [ ] Aggiungere a `data/sources.js` (con tier) le ~48 testate/domini citati nei contenuti ma assenti (es. news.un.org, cnn.com, britannica.com, feeds.bbci.co.uk, ohchr.org, euronews.com): oggi sono solo warning del check; poi promuoverli a errori
+- [x] Aggiungere a `data/sources.js` (con tier) le ~48 testate/domini citati nei contenuti ma assenti (es. news.un.org, cnn.com, britannica.com, feeds.bbci.co.uk, ohchr.org, euronews.com): oggi sono solo warning del check; poi promuoverli a errori
 
 ## Idee
 
@@ -162,8 +162,10 @@ here at most (see "Recently resolved"), not a re-description.
 - 2026-08-10 — Source reliability framework (`data/sources.js`,
   `sources.html`) added as the site's citation methodology. `5c7f43b`.
 
+- 2026-10-19: classificate 43 fonti nuove in `data/sources.js` (+ campo opzionale `domains` per alias, usato da `feeds.bbci.co.uk` -> BBC); il dominio citato mancante è ora un errore del check (0 errori, 0 warning). Tier prudenti e provvisori, da rivedere: testate generaliste (CNN, NBC, CBS, PBS, Euronews, Bloomberg...) in B, non A; UN/OHCHR/Lancet/ACAPS e think tank in C (come Crisis Group), con nota di attribuzione per quelli con orientamento dichiarato (FDD, Critical Threats, Africa Center, CTC West Point); siti di ministeri/ambasciate cinesi e pakistane e DHS in D (parti coinvolte), come CRS, Commons Library e PCA; Britannica e SAHO terziarie; outlet regionali (Caspian News, Middle East Eye, Neos Kosmos, Cyprus Mail) in B con nota di cautela.
+
 ## Log
-- 2026-10-19: note spostate nel backend unico `site-notes`
+- 2026-10-19: note spostate nel backend unico `site-notes`; 🤖 classificate le 43 fonti mancanti in `data/sources.js` e promosso il controllo del dominio citato da warning a errore
 - 2026-10-18: 🤖 aggiunto controllo di coerenza registro/pagine/contenuti/fonti (`scripts/check-consistency.mjs`) con workflow CI in sola lettura; sull'albero attuale 0 errori e 79 warning di fonti non classificate
 - 2026-10-18: aggiunte le idee da IDEE.md (protocollo unico)
 - 2026-10-18: FUTURE-ARCHITECTURE.md unito in ROADMAP.md (protocollo unico)

@@ -50,7 +50,7 @@ const templateH2 = h2s(read("content/_template.md")).map(norm);
 if (templateH2.length === 0) err("content/_template.md: no H2 headings found");
 
 // --- source hosts ---
-const srcHosts = SOURCES.map((s) => hostOf(s.url)).filter(Boolean);
+const srcHosts = SOURCES.flatMap((s) => [hostOf(s.url), ...(s.domains || [])]).filter(Boolean);
 const knownHost = (h) => srcHosts.some((s) => h === s || h.endsWith("." + s));
 
 // --- pages and content ---
@@ -95,7 +95,7 @@ for (const id of ids) {
   for (const u of new Set([...inline, ...listed])) {
     const h = hostOf(u);
     if (!h) { err(`${mdPath}: unparseable URL ${u}`); continue; }
-    if (!knownHost(h)) warn(`${mdPath}: outlet "${h}" is not in data/sources.js (${u})`);
+    if (!knownHost(h)) err(`${mdPath}: outlet "${h}" is not in data/sources.js (${u})`);
   }
   for (const u of new Set(inline)) {
     if (!listed.has(u)) warn(`${mdPath}: inline-cited URL not in Sources section: ${u}`);
