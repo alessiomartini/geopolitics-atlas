@@ -244,6 +244,67 @@ h3 {
   color: var(--accent);
 }
 
+/* Timeline of dated events (built by page-loader.js from the Historical Context text) */
+.timeline {
+  margin: 0 0 1.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.timeline summary {
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.timeline ol {
+  list-style: none;
+  margin: 0.9rem 0 0.2rem;
+  padding: 0 0 0 1rem;
+  border-left: 2px solid var(--border);
+}
+
+.timeline li {
+  position: relative;
+  margin: 0 0 0.9rem;
+  padding-left: 0.25rem;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1rem - 5px);
+  top: 0.35rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.timeline .tl-year {
+  display: block;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.timeline .tl-text {
+  display: block;
+  color: var(--text-muted);
+}
+
+.section-body p:target {
+  background: var(--accent-soft);
+  border-radius: 4px;
+}
+
 .section-nav {
   display: flex;
   flex-wrap: wrap;

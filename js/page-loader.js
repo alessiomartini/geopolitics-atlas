@@ -7,6 +7,10 @@
  * template level regardless of how the markdown itself is ordered.
  */
 (async function () {
+  const MIN_TIMELINE_EVENTS = 3;
+  const YEAR_RE = /\b(1[5-9]\d\d|20\d\d)\b/;
+  const ABBREVIATIONS = /(?:\b(?:U\.S|U\.K|U\.N|St|Mr|Mrs|Dr|Gen|Col|Lt|vs|No|Inc|Jr|Sr)|\b[A-Z])\.$/;
+
   const titleEl = document.getElementById("conflict-title");
   const sectionEls = document.querySelectorAll("[data-section]");
 
@@ -47,6 +51,7 @@
       const raw = sections[key];
       if (raw && raw.trim()) {
         el.innerHTML = marked.parse(raw.trim());
+        if (key === "historical context") renderTimeline(el);
       } else {
         el.innerHTML = '<p class="todo-note">TODO: content not yet written for this section.</p>';
       }
@@ -66,6 +71,62 @@
       ? `Last verified ${info.date} (${info.days} days ago) — may be out of date`
       : `Last verified ${info.date}`;
     titleEl.insertAdjacentElement("afterend", note);
+  }
+
+  // Builds a compact chronological timeline from the sentences of the
+  // Historical Context section that mention a year. Nothing is written
+  // separately: each entry is the original sentence (citations included),
+  // linked to the paragraph it came from. Hidden when fewer than
+  // MIN_TIMELINE_EVENTS dated sentences are found.
+  function splitSentences(html) {
+    const out = [];
+    const re = /[.!?]\)?\s+(?=[A-Z\u201c"])/g;
+    let start = 0;
+    let m;
+    while ((m = re.exec(html))) {
+      const end = m.index + m[0].trimEnd().length;
+      if (ABBREVIATIONS.test(html.slice(start, m.index + 1))) continue;
+      out.push(html.slice(start, end));
+      start = m.index + m[0].length;
+    }
+    out.push(html.slice(start));
+    return out.map((t) => t.trim()).filter(Boolean);
+  }
+
+  function renderTimeline(container) {
+    const events = [];
+    container.querySelectorAll(":scope > p").forEach((p, i) => {
+      p.id = "history-p" + (i + 1);
+      splitSentences(p.innerHTML).forEach((sentence) => {
+        const plain = sentence.replace(/<[^>]*>/g, " ");
+        const m = plain.match(YEAR_RE);
+        if (m) events.push({ year: parseInt(m[1], 10), html: sentence, target: p.id });
+      });
+    });
+    if (events.length < MIN_TIMELINE_EVENTS) return;
+    events.sort((a, b) => a.year - b.year); // stable: keeps text order within a year
+
+    const details = document.createElement("details");
+    details.className = "timeline";
+    details.open = true;
+    const summary = document.createElement("summary");
+    summary.textContent = "Timeline of dated events";
+    const list = document.createElement("ol");
+    events.forEach((ev) => {
+      const li = document.createElement("li");
+      const year = document.createElement("a");
+      year.className = "tl-year";
+      year.href = "#" + ev.target;
+      year.title = "Jump to this passage in the text";
+      year.textContent = ev.year;
+      const text = document.createElement("span");
+      text.className = "tl-text";
+      text.innerHTML = ev.html;
+      li.append(year, text);
+      list.appendChild(li);
+    });
+    details.append(summary, list);
+    container.prepend(details);
   }
 
   function normalize(str) {
