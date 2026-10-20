@@ -13,7 +13,7 @@ Unico file per todo, idee, decisioni e diario, letto da Projects Overview
 ## Da fare
 - [ ] Smistare le note in attesa (ora nel D1 condiviso `site-notes`, `site = 'geopolitics-atlas'`)
 - [x] Indicatore "ultima verifica" per ogni conflitto
-- [ ] Vista timeline per conflitto
+- [x] Vista timeline per conflitto
 - [x] Controllo automatico della coerenza tra `conflicts.js`, pagine e fonti (`scripts/check-consistency.mjs` + workflow CI)
 - [x] Aggiungere a `data/sources.js` (con tier) le ~48 testate/domini citati nei contenuti ma assenti (es. news.un.org, cnn.com, britannica.com, feeds.bbci.co.uk, ohchr.org, euronews.com): oggi sono solo warning del check; poi promuoverli a errori
 
@@ -98,6 +98,7 @@ maintaining N separate D1+Worker pairs becomes a real burden.
 
 ## Decisioni e cose provate
 
+- 2026-10-20: timeline per conflitto = estrazione automatica nel browser (`renderTimeline` in `js/page-loader.js`): ogni frase della sezione Historical Context che contiene un anno (1500-2099) diventa una voce, ordinata per anno, con la frase originale (citazioni incluse, nessun fatto nuovo) e l'anno che rimanda al paragrafo di origine; nascosta se ci sono meno di 3 voci. Scelta rispetto a una sezione `## Timeline` o a `data/timelines/<id>.js` perché non rompe il contratto dei quattro H2 (`check-consistency.mjs` invariato) e non duplica i dati. Limiti: l'anno mostrato è il primo della frase (es. la frase 2005/2006/2007 di Gaza sta sotto 2005, quella 2008-2023 sotto 2008); le frasi senza anno non compaiono; una frase lunga resta intera; la divisione in frasi è euristica (abbreviazioni comuni gestite). Se serve più precisione, passare a una sezione/file strutturato con data esplicita per evento. Su tutte le 22 pagine: da 3 a 7 voci, nessun errore in console.
 - 2026-10-19: "ultima verifica" = campo `lastVerified: "YYYY-MM-DD"` in `data/conflicts.js` (obbligatorio, controllato da `check-consistency.mjs`), mostrato sotto il titolo e nel tooltip della mappa, evidenziato "may be out of date" oltre 90 giorni (`STALE_AFTER_DAYS`). Valori iniziali non inventati: data dell'ultimo commit che ha toccato `content/<id>.md` (tutte 2026-08-10, quindi nessuna ancora oltre soglia). Le pagine conflitto ora caricano anche `data/conflicts.js` (il check lo richiede). Limite: è una data manuale, da aggiornare a ogni ri-verifica vera, non per refusi; non c'è ancora un report automatico delle pagine più vecchie (resta l'idea "Content staleness tracking" per quella parte).
 - 2026-10-19: il widget scrive nel backend unico `site-notes` (repo `alessiomartini/site-notes`); tolti `worker/` e i workflow *Deploy Notes Worker* / *Read Notes*. Il vecchio worker `geopolitics-atlas-notes` e il suo D1 vanno spenti da Alessio dopo la migrazione delle note.; le note mandano l'autore (`?sono-alessio` segna il browser di Alessio, le altre sono di visitatori); installabile come app a sé dal telefono (manifest con nome, icona e perimetro propri)
 
@@ -166,6 +167,7 @@ here at most (see "Recently resolved"), not a re-description.
 - 2026-10-19: classificate 43 fonti nuove in `data/sources.js` (+ campo opzionale `domains` per alias, usato da `feeds.bbci.co.uk` -> BBC); il dominio citato mancante è ora un errore del check (0 errori, 0 warning). Tier prudenti e provvisori, da rivedere: testate generaliste (CNN, NBC, CBS, PBS, Euronews, Bloomberg...) in B, non A; UN/OHCHR/Lancet/ACAPS e think tank in C (come Crisis Group), con nota di attribuzione per quelli con orientamento dichiarato (FDD, Critical Threats, Africa Center, CTC West Point); siti di ministeri/ambasciate cinesi e pakistane e DHS in D (parti coinvolte), come CRS, Commons Library e PCA; Britannica e SAHO terziarie; outlet regionali (Caspian News, Middle East Eye, Neos Kosmos, Cyprus Mail) in B con nota di cautela.
 
 ## Log
+- 2026-10-20: 🤖 aggiunta la timeline degli eventi datati in cima a Historical Context di ogni conflitto (estratta dal testo esistente, `js/page-loader.js` + CSS)
 - 2026-10-19: 🤖 aggiunto `lastVerified` per conflitto (pagina, tooltip della mappa, avviso oltre 90 giorni, controllo di coerenza, README)
 - 2026-10-19: note spostate nel backend unico `site-notes`; 🤖 classificate le 43 fonti mancanti in `data/sources.js` e promosso il controllo del dominio citato da warning a errore
 - 2026-10-18: 🤖 aggiunto controllo di coerenza registro/pagine/contenuti/fonti (`scripts/check-consistency.mjs`) con workflow CI in sola lettura; sull'albero attuale 0 errori e 79 warning di fonti non classificate
