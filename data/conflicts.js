@@ -32,7 +32,7 @@ const CONFLICTS = [
     coordinates: [31.1656, 48.3794],
     page: "conflicts/russia-ukraine.html",
     content: "content/russia-ukraine.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-10-31"
   },
   {
     id: "sudan",
