@@ -23,7 +23,7 @@ const CONFLICTS = [
     coordinates: [34.3, 31.4],
     page: "conflicts/gaza.html",
     content: "content/gaza.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-10-31"
   },
   {
     id: "russia-ukraine",

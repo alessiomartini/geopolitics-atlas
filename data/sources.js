@@ -95,6 +95,7 @@ const SOURCES = [
   { id: "france24", name: "France 24", url: "https://www.france24.com", tier: "B", sourceType: "secondary", notes: "French public international broadcaster (†), editorially independent." },
   { id: "aljazeera", name: "Al Jazeera English", url: "https://www.aljazeera.com", tier: "B", sourceType: "secondary", notes: "Qatar state-funded (†); treat coverage directly involving Qatar or Gulf politics with added scrutiny." },
   { id: "cnn", name: "CNN", url: "https://www.cnn.com", tier: "B", sourceType: "secondary" },
+  { id: "timesofisrael", name: "The Times of Israel", url: "https://www.timesofisrael.com", tier: "B", sourceType: "secondary", notes: "Israeli independent outlet; attribute Israeli government and military positions to them rather than stating as fact." },
   { id: "nbcnews", name: "NBC News", url: "https://www.nbcnews.com", tier: "B", sourceType: "secondary" },
   { id: "cbsnews", name: "CBS News", url: "https://www.cbsnews.com", tier: "B", sourceType: "secondary" },
   { id: "pbs", name: "PBS NewsHour", url: "https://www.pbs.org/newshour", tier: "B", sourceType: "secondary", notes: "Publicly funded (†), editorially independent." },
