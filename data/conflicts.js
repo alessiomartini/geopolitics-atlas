@@ -41,7 +41,7 @@ const CONFLICTS = [
     coordinates: [30.2176, 12.8628],
     page: "conflicts/sudan.html",
     content: "content/sudan.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-10-31"
   },
   {
     id: "xinjiang",
