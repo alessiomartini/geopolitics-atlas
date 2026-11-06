@@ -80,9 +80,16 @@
   }
 
   function showTooltip(event, n) {
+    const info = lastVerifiedInfo(n.data);
+    const verified = info.stale
+      ? `Last verified ${info.date} — may be out of date`
+      : `Last verified ${info.date}`;
     tooltip
       .classed("hidden", false)
-      .html(`<strong>${escapeHtml(n.data.title)}</strong><p>${escapeHtml(n.data.summary)}</p>`);
+      .html(
+        `<strong>${escapeHtml(n.data.title)}</strong><p>${escapeHtml(n.data.summary)}</p>` +
+        `<p class="last-verified${info.stale ? " stale" : ""}">${escapeHtml(verified)}</p>`
+      );
     moveTooltip(event);
   }
 
