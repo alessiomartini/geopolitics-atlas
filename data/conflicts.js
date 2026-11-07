@@ -59,7 +59,7 @@ const CONFLICTS = [
     coordinates: [96.0, 21.0],
     page: "conflicts/myanmar.html",
     content: "content/myanmar.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "drc",
@@ -77,7 +77,7 @@ const CONFLICTS = [
     coordinates: [44.5, 15.4],
     page: "conflicts/yemen.html",
     content: "content/yemen.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "sahel",
@@ -131,7 +131,7 @@ const CONFLICTS = [
     coordinates: [-72.3, 18.9],
     page: "conflicts/haiti.html",
     content: "content/haiti.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "taiwan-strait",
