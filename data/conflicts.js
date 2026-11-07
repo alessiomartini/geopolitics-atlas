@@ -140,7 +140,7 @@ const CONFLICTS = [
     coordinates: [119.5, 24.0],
     page: "conflicts/taiwan-strait.html",
     content: "content/taiwan-strait.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "korea",
@@ -149,7 +149,7 @@ const CONFLICTS = [
     coordinates: [127.0, 38.3],
     page: "conflicts/korea.html",
     content: "content/korea.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "kashmir",
@@ -158,7 +158,7 @@ const CONFLICTS = [
     coordinates: [76.5, 34.0],
     page: "conflicts/kashmir.html",
     content: "content/kashmir.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "armenia-azerbaijan",
@@ -185,7 +185,7 @@ const CONFLICTS = [
     coordinates: [114.0, 12.0],
     page: "conflicts/south-china-sea.html",
     content: "content/south-china-sea.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "venezuela",
