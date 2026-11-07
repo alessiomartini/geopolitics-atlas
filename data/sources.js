@@ -123,6 +123,10 @@ const SOURCES = [
   { id: "thestar-my", name: "The Star (Malaysia)", url: "https://www.thestar.com.my", tier: "B", sourceType: "secondary", notes: "Malaysian daily; cited here only for republished Reuters wire copy." },
   { id: "thenewhumanitarian", name: "The New Humanitarian", url: "https://www.thenewhumanitarian.org", tier: "B", sourceType: "secondary", notes: "Independent humanitarian-affairs journalism." },
   { id: "khaleejtimes", name: "Khaleej Times", url: "https://www.khaleejtimes.com", tier: "B", sourceType: "secondary", notes: "UAE English-language daily; cited here only for republished Reuters wire copy, attributed inline." },
+  { id: "irishtimes", name: "The Irish Times", url: "https://www.irishtimes.com", tier: "B", sourceType: "secondary", notes: "Cited here for a Guardian report it republished (credited to The Guardian); judged as The Guardian." },
+  { id: "hurriyet", name: "Hürriyet Daily News", url: "https://www.hurriyetdailynews.com", tier: "B", sourceType: "secondary", notes: "Turkish English-language daily; Turkey is aligned with Azerbaijan and involved in the Cyprus dispute, so cite only for facts not touching Turkish interests, and attribute." },
+  { id: "taipeitimes", name: "Taipei Times", url: "https://www.taipeitimes.com", tier: "B", sourceType: "secondary", notes: "Taiwan-based daily; treat coverage of China-related disputes as non-neutral and attribute China's position to its own officials." },
+  { id: "politis", name: "Politis (Cyprus)", url: "https://en.politis.com.cy", tier: "B", sourceType: "secondary", notes: "Cyprus-based outlet; attribute leaders' statements by name." },
   { id: "ewn", name: "Eyewitness News (EWN, South Africa)", url: "https://www.ewn.co.za", tier: "B", sourceType: "secondary", notes: "South African news site; cited here only for republished AFP wire copy, attributed inline." },
 
   // --- Tier C ---
@@ -141,6 +145,10 @@ const SOURCES = [
   { id: "lancet", name: "The Lancet", url: "https://www.thelancet.com", tier: "C", sourceType: "primary", notes: "Peer-reviewed medical journal; cite the specific study and its method." },
   { id: "acaps", name: "ACAPS", url: "https://www.acaps.org", tier: "C", sourceType: "secondary" },
   { id: "securitycouncilreport", name: "Security Council Report", url: "https://www.securitycouncilreport.org", tier: "C", sourceType: "secondary", notes: "Independent non-profit tracking UN Security Council work." },
+  { id: "wsrw", name: "Western Sahara Resource Watch", url: "https://wsrw.org", tier: "C", sourceType: "secondary", notes: "Advocacy group for Sahrawi self-determination; use for the record of statements and votes, attribute its own legal arguments." },
+  { id: "moroccoworldnews", name: "Morocco World News", url: "https://www.moroccoworldnews.com", tier: "C", sourceType: "secondary", notes: "Moroccan outlet; Morocco is a party to the Western Sahara dispute, so Moroccan government positions are attributed and not used to verify facts alone." },
+  { id: "dailysabah", name: "Daily Sabah", url: "https://www.dailysabah.com", tier: "C", sourceType: "secondary", notes: "Turkish pro-government outlet; Turkey is a party to the Cyprus dispute; cite only for the occurrence of events and attribute positions." },
+  { id: "kelleydrye", name: "Kelley Drye & Warren (trade client alerts)", url: "https://www.kelleydrye.com", tier: "C", sourceType: "secondary", notes: "Law-firm summary of US government announcements; check against the Federal Register or DHS where consequential." },
   { id: "icij", name: "ICIJ (International Consortium of Investigative Journalists)", url: "https://www.icij.org", tier: "C", sourceType: "secondary", notes: "Investigative consortium working from leaked documents; cite the specific investigation." },
   { id: "euaa", name: "EU Agency for Asylum (EUAA)", url: "https://www.euaa.europa.eu", tier: "C", sourceType: "secondary", notes: "Country-of-origin information compilations." },
   { id: "insightcrime", name: "InSight Crime", url: "https://insightcrime.org", tier: "C", sourceType: "secondary", notes: "Think tank/investigative outlet on organized crime." },
@@ -165,6 +173,7 @@ const SOURCES = [
   { id: "pca", name: "Permanent Court of Arbitration (case documents)", url: "https://pcacases.com", tier: "D", sourceType: "primary", notes: "Arbitral tribunal documents; quasi-independent, same caveat as ICJ." },
   { id: "mofa-pk", name: "Ministry of Foreign Affairs of Pakistan", url: "https://mofa.gov.pk", tier: "D", sourceType: "primary", notes: "Official statements; involved party." },
   { id: "mfa-cn", name: "Ministry of Foreign Affairs of China", url: "https://www.mfa.gov.cn", tier: "D", sourceType: "primary", notes: "Official statements; involved party." },
+  { id: "pm-armenia", name: "Office of the Prime Minister of Armenia", url: "https://www.primeminister.am", tier: "D", sourceType: "primary", notes: "Official readouts; involved party in the Armenia-Azerbaijan conflict." },
   { id: "china-embassy", name: "Embassies of China (embassy sites)", url: "https://id.china-embassy.gov.cn", tier: "D", sourceType: "primary", notes: "Official statements of the Chinese state; involved party." },
 
   // --- Tier E ---
