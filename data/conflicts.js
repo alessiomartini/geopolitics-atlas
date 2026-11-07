@@ -23,7 +23,7 @@ const CONFLICTS = [
     coordinates: [34.3, 31.4],
     page: "conflicts/gaza.html",
     content: "content/gaza.md",
-    lastVerified: "2026-10-31"
+    lastVerified: "2026-11-07"
   },
   {
     id: "russia-ukraine",
@@ -113,7 +113,7 @@ const CONFLICTS = [
     coordinates: [38.0, 35.0],
     page: "conflicts/syria.html",
     content: "content/syria.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "lebanon-israel",
@@ -194,7 +194,7 @@ const CONFLICTS = [
     coordinates: [-66.9, 10.5],
     page: "conflicts/venezuela.html",
     content: "content/venezuela.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "western-sahara",
