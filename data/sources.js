@@ -116,6 +116,9 @@ const SOURCES = [
   { id: "cyprus-mail", name: "Cyprus Mail", url: "https://cyprus-mail.com", tier: "B", sourceType: "secondary", notes: "Cyprus-based outlet; opinion pieces are attributed to their authors." },
   { id: "neoskosmos", name: "Neos Kosmos", url: "https://neoskosmos.com", tier: "B", sourceType: "secondary", notes: "Greek-diaspora outlet; relevant to Cyprus coverage with added scrutiny." },
   { id: "dawan-africa", name: "Dawan Africa", url: "https://www.dawan.africa", tier: "B", sourceType: "secondary", notes: "Regional outlet; cross-check with a Tier A/B source." },
+  { id: "anadolu", name: "Anadolu Agency", url: "https://www.aa.com.tr", tier: "B", sourceType: "secondary", notes: "Turkish state news agency (†); reliable for wire-style reporting on third-party events, treat coverage involving Turkish interests with added scrutiny." },
+  { id: "africanews", name: "Africanews", url: "https://www.africanews.com", tier: "B", sourceType: "secondary", notes: "Euronews-owned pan-African outlet; often republishes AP/AFP/Reuters wire copy, attributed inline." },
+  { id: "thestar-my", name: "The Star (Malaysia)", url: "https://www.thestar.com.my", tier: "B", sourceType: "secondary", notes: "Malaysian daily; cited here only for republished Reuters wire copy." },
   { id: "thenewhumanitarian", name: "The New Humanitarian", url: "https://www.thenewhumanitarian.org", tier: "B", sourceType: "secondary", notes: "Independent humanitarian-affairs journalism." },
 
   // --- Tier C ---
