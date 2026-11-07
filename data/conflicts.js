@@ -68,7 +68,7 @@ const CONFLICTS = [
     coordinates: [29.2, -1.68],
     page: "conflicts/drc.html",
     content: "content/drc.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "yemen",
@@ -122,7 +122,7 @@ const CONFLICTS = [
     coordinates: [35.5, 33.3],
     page: "conflicts/lebanon-israel.html",
     content: "content/lebanon-israel.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "haiti",
@@ -176,7 +176,7 @@ const CONFLICTS = [
     coordinates: [51.4, 35.7],
     page: "conflicts/iran-israel.html",
     content: "content/iran-israel.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "south-china-sea",
