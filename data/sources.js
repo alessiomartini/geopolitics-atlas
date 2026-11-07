@@ -122,6 +122,7 @@ const SOURCES = [
   { id: "africanews", name: "Africanews", url: "https://www.africanews.com", tier: "B", sourceType: "secondary", notes: "Euronews-owned pan-African outlet; often republishes AP/AFP/Reuters wire copy, attributed inline." },
   { id: "thestar-my", name: "The Star (Malaysia)", url: "https://www.thestar.com.my", tier: "B", sourceType: "secondary", notes: "Malaysian daily; cited here only for republished Reuters wire copy." },
   { id: "thenewhumanitarian", name: "The New Humanitarian", url: "https://www.thenewhumanitarian.org", tier: "B", sourceType: "secondary", notes: "Independent humanitarian-affairs journalism." },
+  { id: "khaleejtimes", name: "Khaleej Times", url: "https://www.khaleejtimes.com", tier: "B", sourceType: "secondary", notes: "UAE English-language daily; cited here only for republished Reuters wire copy, attributed inline." },
   { id: "ewn", name: "Eyewitness News (EWN, South Africa)", url: "https://www.ewn.co.za", tier: "B", sourceType: "secondary", notes: "South African news site; cited here only for republished AFP wire copy, attributed inline." },
 
   // --- Tier C ---
