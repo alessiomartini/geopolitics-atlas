@@ -86,7 +86,7 @@ const CONFLICTS = [
     coordinates: [1.5, 14.5],
     page: "conflicts/sahel.html",
     content: "content/sahel.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "somalia",
@@ -95,7 +95,7 @@ const CONFLICTS = [
     coordinates: [45.3, 2.03],
     page: "conflicts/somalia.html",
     content: "content/somalia.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "ethiopia",
@@ -104,7 +104,7 @@ const CONFLICTS = [
     coordinates: [38.7, 14.1],
     page: "conflicts/ethiopia.html",
     content: "content/ethiopia.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "syria",
