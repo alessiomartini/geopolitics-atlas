@@ -50,7 +50,7 @@ const CONFLICTS = [
     coordinates: [85.0, 41.0],
     page: "conflicts/xinjiang.html",
     content: "content/xinjiang.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "myanmar",
@@ -167,7 +167,7 @@ const CONFLICTS = [
     coordinates: [46.75, 39.9],
     page: "conflicts/armenia-azerbaijan.html",
     content: "content/armenia-azerbaijan.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "iran-israel",
@@ -203,7 +203,7 @@ const CONFLICTS = [
     coordinates: [-12.5, 24.5],
     page: "conflicts/western-sahara.html",
     content: "content/western-sahara.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   },
   {
     id: "cyprus",
@@ -212,7 +212,7 @@ const CONFLICTS = [
     coordinates: [33.3, 35.1],
     page: "conflicts/cyprus.html",
     content: "content/cyprus.md",
-    lastVerified: "2026-08-10"
+    lastVerified: "2026-11-07"
   }
 ];
 
