@@ -122,6 +122,7 @@ const SOURCES = [
   { id: "africanews", name: "Africanews", url: "https://www.africanews.com", tier: "B", sourceType: "secondary", notes: "Euronews-owned pan-African outlet; often republishes AP/AFP/Reuters wire copy, attributed inline." },
   { id: "thestar-my", name: "The Star (Malaysia)", url: "https://www.thestar.com.my", tier: "B", sourceType: "secondary", notes: "Malaysian daily; cited here only for republished Reuters wire copy." },
   { id: "thenewhumanitarian", name: "The New Humanitarian", url: "https://www.thenewhumanitarian.org", tier: "B", sourceType: "secondary", notes: "Independent humanitarian-affairs journalism." },
+  { id: "ewn", name: "Eyewitness News (EWN, South Africa)", url: "https://www.ewn.co.za", tier: "B", sourceType: "secondary", notes: "South African news site; cited here only for republished AFP wire copy, attributed inline." },
 
   // --- Tier C ---
   { id: "ocha", name: "UN OCHA / ReliefWeb", url: "https://www.unocha.org", tier: "C", sourceType: "primary" },
@@ -142,6 +143,9 @@ const SOURCES = [
   { id: "icij", name: "ICIJ (International Consortium of Investigative Journalists)", url: "https://www.icij.org", tier: "C", sourceType: "secondary", notes: "Investigative consortium working from leaked documents; cite the specific investigation." },
   { id: "euaa", name: "EU Agency for Asylum (EUAA)", url: "https://www.euaa.europa.eu", tier: "C", sourceType: "secondary", notes: "Country-of-origin information compilations." },
   { id: "insightcrime", name: "InSight Crime", url: "https://insightcrime.org", tier: "C", sourceType: "secondary", notes: "Think tank/investigative outlet on organized crime." },
+  { id: "kujengaamani", name: "Kujenga Amani (SSRC)", url: "https://kujenga-amani.ssrc.org", tier: "C", sourceType: "secondary", notes: "Social Science Research Council blog of signed academic analysis; attribute to the named author." },
+  { id: "africanarguments", name: "African Arguments", url: "https://africanarguments.org", tier: "C", sourceType: "secondary", notes: "Analysis outlet of the International African Institute; signed pieces, attribute to the named author." },
+  { id: "riotimes", name: "The Rio Times", url: "https://www.riotimesonline.com", tier: "C", sourceType: "secondary", notes: "Online outlet compiling other outlets' reports; weakest tier-C entry, use only attributed and for claims it sources to named reports, never alone for consequential facts." },
   { id: "criticalthreats", name: "Critical Threats (AEI)", url: "https://www.criticalthreats.org", tier: "C", sourceType: "secondary", notes: "Think tank with a US security-policy orientation." },
   { id: "brookings", name: "Brookings Institution", url: "https://www.brookings.edu", tier: "C", sourceType: "secondary", notes: "Think tank; attribute analysis to the named author." },
   { id: "cfr", name: "Council on Foreign Relations", url: "https://www.cfr.org", tier: "C", sourceType: "secondary", notes: "US think tank; attribute analysis to the named author." },
