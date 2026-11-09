@@ -1,33 +1,9 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 ## Project
 
 Static geopolitics atlas: per-conflict content, map data, front-end
 JavaScript, and a notes widget that posts to the shared `site-notes` Worker.
-
-## Working across sessions
-
-This repo is worked on by independent Claude Code sessions over time, not
-one continuous conversation. Coherence across sessions is maintained by
-three files, not by memory:
-
-- **Before starting non-trivial work**, read `README.md` and
-  `ROADMAP.md` — the latter holds in-progress items, known
-  rough edges, and pending ideas that a fresh session has no other way to
-  know about. Also read the relevant `content`/`data`/script files
-  before editing them.
-- **Before stopping**, update `ROADMAP.md`: move what you
-  finished out of "In progress", add anything you noticed but didn't fix
-  under "Known small issues" or "Ideas not yet built", and leave enough
-  context on anything unfinished that a cold session can pick it up.
-- **Keep `README.md`'s "Status" section accurate** if you change the
-  conflict roster or a major deployed piece (e.g. the notes worker).
-- **Only edit this file (`CLAUDE.md`) when the actual architecture or a
-  standing rule changes** — a new moving part, a changed convention, a
-  new command. Routine content edits (writing/updating a conflict's
-  prose) don't belong here.
 
 ## Commands
 
@@ -39,20 +15,8 @@ HTML/CSS/JS deployed as-is, with no root-level `package.json`.
   then open `http://localhost:8000/`. Required because `page-loader.js`
   uses `fetch()` to load markdown, which browsers block under a
   `file://` URL.
-- **Read saved notes**: they live in the shared `site-notes` D1 (repo
-  `alessiomartini/site-notes`, `site = 'geopolitics-atlas'`); see its README.
+- **Read saved notes**: they live in the shared `site-notes` D1 (`site = 'geopolitics-atlas'`); Claude reads them with wrangler (procedure in `site-notes/CLAUDE.md`).
 - No test suite exists for the front end.
-
-## Verification
-
-- Preview with a local HTTP server (see Commands) and test the affected
-  page in a browser — don't rely on reading the code alone.
-- Check the browser console and the worker/data-loading path for errors.
-- Validate changed JSON/JS data files against the existing format and
-  against representative entries; do not silently alter historical facts
-  or source attribution.
-- Inspect the diff and report what you verified (browser check, data
-  validation) before committing.
 
 ## Architecture
 
@@ -62,8 +26,7 @@ bundler, no transpilation, no `package.json`. Do not add a build system
 or new dependencies without explicit approval.
 
 ### Content, template, and registry are three files that must agree by convention
-Nothing in the repo enforces this link — it's worth understanding because
-the failure mode is silent:
+`scripts/check-consistency.mjs` (run by CI) checks that they agree; without it the failure mode is silent:
 
 - **`data/conflicts.js`** — the map registry. One entry per conflict:
   `id`, `title`, tooltip `summary`, `coordinates`, and the `page`/`content`
@@ -84,8 +47,7 @@ If an `id` doesn't match across all three, a content file is missing, or
 an H2 heading in the markdown doesn't exactly match (mod case) the
 `data-section` attribute in the HTML, the result is a silent
 "TODO: content not yet written for this section" or a failed fetch in the
-browser console — not a build failure. There is no CI check for this (see
-`ROADMAP.md` for a proposed one). When adding or renaming a
+browser console — not a build failure. When adding or renaming a
 conflict, update all three files together; see README's "Adding a new
 conflict". Keep content in these data files rather than hardcoding it
 into templates.
@@ -109,8 +71,7 @@ normative, not just the tier list.
 `js/notes-widget.js` is injected on every page (`index.html`,
 `sources.html`, every `conflicts/*.html`) and POSTs free-text notes to the
 shared `site-notes` Worker (`https://site-notes.alemarti-2001.workers.dev/geopolitics-atlas/notes`,
-repo `alessiomartini/site-notes`, one D1 for all of Alessio's sites). Reading
-needs the owner's token, never the public site. A hidden honeypot field
+repo `alessiomartini/site-notes`, one D1 for all of Alessio's sites). The site never reads notes back (site-notes is write-only; Claude reads them from the D1 with wrangler). A hidden honeypot field
 (`website`) makes bot submissions return a fake success. The origin
 allowlist lives in that repo's `src/index.js`.
 
@@ -150,20 +111,3 @@ output consistent rather than each page reading like a different author:
 - Do not silently alter historical facts, figures, or source attribution
   in existing content — a factual correction is a deliberate edit, not a
   side effect of a rewrite.
-
-## Roadmap, idee e progressi
-
-`ROADMAP.md` nella root è l'**unico** file per todo, idee, decisioni e diario del progetto
-(niente `FUTURE-ARCHITECTURE.md`, `IDEE.md`, `TODO.md`). È letto da https://alessiomartini.github.io/projects-overview/.
-Sezioni: `## <fase>` (checkbox, contano nella percentuale), `## Idee` (checkbox, non contano),
-`## Decisioni e cose provate` (prosa: scartato/rimandato e perché, provato e annullato, limiti e bug noti), `## Log`.
-
-- Alla fine di ogni sessione di lavoro (prima del commit finale), aggiorna `ROADMAP.md`:
-  - spunta (`- [x]`) i punti completati in questa sessione;
-  - aggiungi come `- [ ]` i nuovi compiti nella fase giusta, e le idee non decise in `## Idee`;
-  - annota in `## Decisioni e cose provate` ciò che è stato scartato, rimandato o annullato, col perché;
-  - aggiungi in cima a `## Log` una riga `- AAAA-MM-GG: <cosa è stato fatto, in una frase>`
-    (se esiste già una riga con la data di oggi, estendila invece di crearne un'altra).
-- Non riscrivere né riordinare le voci esistenti senza motivo; non cancellare le voci completate.
-- Se `ROADMAP.md` non esiste, crealo da `templates/ROADMAP.md` di projects-overview.
-- Includi l'aggiornamento di `ROADMAP.md` nello stesso commit del lavoro.
