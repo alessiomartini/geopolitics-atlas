@@ -26,6 +26,11 @@
     <a href="#sources">Sources</a>
   </nav>
 
+  <figure class="region-map" id="region-map">
+    <svg role="img"></svg>
+    <figcaption>Regional map centred on the conflict area. Borders: Natural Earth via world-atlas; the lines shown do not imply any position on disputed borders or status.</figcaption>
+  </figure>
+
   <section id="historical-context" class="content-section">
     <h2>Historical Context</h2>
     <div class="section-body" data-section="Historical Context">
@@ -61,11 +66,14 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
 <script>
   const CONTENT_FILE = "../content/kashmir.md";
 </script>
 <script src="../data/conflicts.js"></script>
 <script src="../js/page-loader.js"></script>
+<script src="../js/region-map.js"></script>
 <script src="../js/notes-widget.js?v=4" data-site="geopolitics-atlas"></script>
 </body>
 </html>

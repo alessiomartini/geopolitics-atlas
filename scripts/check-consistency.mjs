@@ -42,6 +42,9 @@ for (const c of CONFLICTS) {
   } else if (c.lastVerified > new Date().toISOString().slice(0, 10)) {
     err(`conflicts.js[${c.id}]: lastVerified ${c.lastVerified} is in the future`);
   }
+  if (c.zoom !== undefined && !(typeof c.zoom === "number" && c.zoom >= 2 && c.zoom <= 12)) {
+    err(`conflicts.js[${c.id}]: zoom must be a number between 2 and 12 (got ${JSON.stringify(c.zoom)})`);
+  }
   if (!existsSync(join(root, c.page))) err(`conflicts.js[${c.id}]: page file missing: ${c.page}`);
   if (!existsSync(join(root, c.content))) err(`conflicts.js[${c.id}]: content file missing: ${c.content}`);
 }
@@ -78,6 +81,9 @@ for (const id of ids) {
   if (!/<script\s+src=["']\.\.\/data\/conflicts\.js["']/.test(html)) {
     err(`${pagePath}: missing <script src="../data/conflicts.js"> (needed for the last-verified note)`);
   }
+
+  if (!/id=["']region-map["']/.test(html)) err(`${pagePath}: missing the regional map container (id="region-map")`);
+  if (!/<script\s+src=["']\.\.\/js\/region-map\.js["']/.test(html)) err(`${pagePath}: missing <script src="../js/region-map.js">`);
 
   const sections = [...html.matchAll(/data-section=["']([^"']+)["']/g)].map((m) => m[1]);
   const secN = sections.map(norm);

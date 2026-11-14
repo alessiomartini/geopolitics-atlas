@@ -587,3 +587,54 @@ h3 {
   opacity: 0.6;
   cursor: default;
 }
+
+/* ---------------------------------------------------------------------- */
+/* Regional map on conflict pages                                         */
+/* ---------------------------------------------------------------------- */
+
+.region-map {
+  margin: 1.5rem 0;
+}
+
+.region-map svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.region-map .region-graticule path {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 0.5;
+  stroke-dasharray: 2 3;
+}
+
+.region-map .region-label {
+  fill: var(--text-faint);
+  font-family: var(--sans);
+  font-size: 11px;
+  pointer-events: none;
+}
+
+.region-map .region-marker {
+  cursor: default;
+}
+
+.region-map figcaption {
+  margin-top: 0.4rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  color: var(--text-faint);
+}
+
+@media (max-width: 600px) {
+  .region-map .region-label { font-size: 14px; }
+}
+
+.region-map .country {
+  stroke: #4a505a;
+  stroke-width: 0.8;
+}
