@@ -134,9 +134,13 @@ const SOURCES = [
   { id: "news4jax-ap", name: "News4Jax", url: "https://www.news4jax.com", tier: "B", sourceType: "secondary", notes: "Cited here only for republished Associated Press wire copy, attributed inline; judged as AP." },
   { id: "devdiscourse", name: "Devdiscourse", url: "https://www.devdiscourse.com", tier: "B", sourceType: "secondary", notes: "Indian news aggregator; cited here only for republished Reuters wire copy, attributed inline; judged as Reuters." },
   { id: "bostonglobe", name: "The Boston Globe", url: "https://www.bostonglobe.com", tier: "B", sourceType: "secondary", notes: "Cited here for a New York Times report it republished (credited to The New York Times); judged as the NYT." },
+  { id: "lanacion", name: "La Nación (English edition)", url: "https://www.lanacion.com.ar/usa/", tier: "B", sourceType: "secondary", notes: "Argentine daily; cited here only for republished wire copy (the agency credit was not visible in the text read), judged as a wire report." },
+  { id: "gulfnews", name: "Gulf News", url: "https://gulfnews.com", tier: "B", sourceType: "secondary", notes: "UAE English-language daily; the UAE is a regional actor in the Gulf and Hormuz disputes, so attribute official claims and cross-check." },
+  { id: "timeslive", name: "TimesLIVE (South Africa)", url: "https://www.timeslive.co.za", tier: "B", sourceType: "secondary", notes: "Cited here only for republished Reuters wire copy, attributed inline; judged as Reuters." },
   { id: "ewn", name: "Eyewitness News (EWN, South Africa)", url: "https://www.ewn.co.za", tier: "B", sourceType: "secondary", notes: "South African news site; cited here only for republished AFP wire copy, attributed inline." },
 
   // --- Tier C ---
+  { id: "arabnews", name: "Arab News", url: "https://www.arabnews.pk", tier: "C", sourceType: "secondary", notes: "Saudi-owned English-language daily; Saudi Arabia is a diplomatic actor in regional conflicts, so attribute claims and cross-check." },
   { id: "fpj", name: "Free Press Journal (India)", url: "https://www.freepressjournal.in", tier: "C", sourceType: "secondary", notes: "Indian daily; India is a party to the Kashmir dispute, so attribute official Indian positions to the government and cross-check." },
   { id: "ocha", name: "UN OCHA / ReliefWeb", url: "https://www.unocha.org", tier: "C", sourceType: "primary" },
   { id: "unhcr", name: "UNHCR", url: "https://www.unhcr.org", tier: "C", sourceType: "primary" },
