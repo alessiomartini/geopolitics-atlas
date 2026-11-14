@@ -77,7 +77,7 @@ const CONFLICTS = [
     zoom: 5,
     page: "conflicts/drc.html",
     content: "content/drc.md",
-    lastVerified: "2026-11-07"
+    lastVerified: "2026-11-14"
   },
   {
     id: "yemen",
@@ -137,7 +137,7 @@ const CONFLICTS = [
     zoom: 7.5,
     page: "conflicts/lebanon-israel.html",
     content: "content/lebanon-israel.md",
-    lastVerified: "2026-11-07"
+    lastVerified: "2026-11-14"
   },
   {
     id: "haiti",
@@ -197,7 +197,7 @@ const CONFLICTS = [
     zoom: 5,
     page: "conflicts/iran-israel.html",
     content: "content/iran-israel.md",
-    lastVerified: "2026-11-07"
+    lastVerified: "2026-11-14"
   },
   {
     id: "south-china-sea",
