@@ -37,7 +37,7 @@ const CONFLICTS = [
     zoom: 5,
     page: "conflicts/russia-ukraine.html",
     content: "content/russia-ukraine.md",
-    lastVerified: "2026-10-31"
+    lastVerified: "2026-11-14"
   },
   {
     id: "sudan",
@@ -47,7 +47,7 @@ const CONFLICTS = [
     zoom: 5,
     page: "conflicts/sudan.html",
     content: "content/sudan.md",
-    lastVerified: "2026-10-31"
+    lastVerified: "2026-11-14"
   },
   {
     id: "xinjiang",
