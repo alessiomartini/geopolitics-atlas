@@ -59,6 +59,24 @@ for (const f of readdirSync(join(root, "content")).filter((f) => f.endsWith(".md
 const templateH2 = h2s(read("content/_template.md")).map(norm);
 if (templateH2.length === 0) err("content/_template.md: no H2 headings found");
 
+// --- conflict images (data/images.js) ---
+const IMAGES = loadGlobal("data/images.js", "CONFLICT_IMAGES");
+const FREE_LICENSE = /^(Public domain|CC0|CC BY(-SA)? \d\.\d)/;
+for (const [id, list] of Object.entries(IMAGES)) {
+  if (!ids.has(id)) err(`images.js: unknown conflict id "${id}"`);
+  if (!Array.isArray(list) || list.length < 1 || list.length > 3) err(`images.js[${id}]: expected 1-3 images`);
+  for (const [i, im] of (list || []).entries()) {
+    const w = `images.js[${id}][${i}]`;
+    for (const k of ["thumb", "page", "caption", "author", "license"]) {
+      if (typeof im[k] !== "string" || !im[k].trim()) err(`${w}: missing "${k}"`);
+    }
+    if (hostOf(im.thumb) !== "upload.wikimedia.org") err(`${w}: thumb must be on upload.wikimedia.org`);
+    if (hostOf(im.page) !== "commons.wikimedia.org") err(`${w}: page must be a commons.wikimedia.org file page`);
+    if (im.license && !FREE_LICENSE.test(im.license)) err(`${w}: license "${im.license}" is not public domain / CC0 / CC BY / CC BY-SA`);
+  }
+}
+for (const id of ids) if (!IMAGES[id]) warn(`images.js: no images for "${id}"`);
+
 // --- source hosts ---
 const srcHosts = SOURCES.flatMap((s) => [hostOf(s.url), ...(s.domains || [])]).filter(Boolean);
 const knownHost = (h) => srcHosts.some((s) => h === s || h.endsWith("." + s));
@@ -84,6 +102,11 @@ for (const id of ids) {
 
   if (!/id=["']region-map["']/.test(html)) err(`${pagePath}: missing the regional map container (id="region-map")`);
   if (!/<script\s+src=["']\.\.\/js\/region-map\.js["']/.test(html)) err(`${pagePath}: missing <script src="../js/region-map.js">`);
+
+  if (!/id=["']conflict-images["']/.test(html)) err(`${pagePath}: missing the images container (id="conflict-images")`);
+  for (const f of ["data/images.js", "js/conflict-images.js"]) {
+    if (!html.includes(`<script src="../${f}"></script>`)) err(`${pagePath}: missing <script src="../${f}">`);
+  }
 
   const sections = [...html.matchAll(/data-section=["']([^"']+)["']/g)].map((m) => m[1]);
   const secN = sections.map(norm);
