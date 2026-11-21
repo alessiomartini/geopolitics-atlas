@@ -30,7 +30,7 @@ const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, "").t
 
 
 // places: optional key places drawn on the regional map (js/region-map.js).
-// Viewport check mirrors region-map.js: 880x440 Web-Mercator, centred on coordinates.
+// Viewport check mirrors region-map.js: 880x440 Web-Mercator, centred on mapCenter (default coordinates).
 function checkPlaces(c) {
   const w = `conflicts.js[${c.id}].places`;
   if (!Array.isArray(c.places) || c.places.length < 1 || c.places.length > 6) {
@@ -40,6 +40,7 @@ function checkPlaces(c) {
   const rad = Math.PI / 180;
   const merc = (lat) => Math.log(Math.tan(Math.PI / 4 + (lat * rad) / 2));
   const scale = (256 * Math.pow(2, typeof c.zoom === "number" ? c.zoom : 6)) / (2 * Math.PI);
+  const ctr = Array.isArray(c.mapCenter) ? c.mapCenter : c.coordinates;
   const seen = new Set();
   for (const [i, p] of c.places.entries()) {
     const pw = `${w}[${i}]`;
@@ -51,8 +52,8 @@ function checkPlaces(c) {
       err(`${pw} (${p.name}): coordinates must be [lon, lat] numbers in range`);
       continue;
     }
-    const x = 440 + scale * (lon - c.coordinates[0]) * rad;
-    const y = 220 - scale * (merc(lat) - merc(c.coordinates[1]));
+    const x = 440 + scale * (lon - ctr[0]) * rad;
+    const y = 220 - scale * (merc(lat) - merc(ctr[1]));
     if (x < 30 || x > 850 || y < 15 || y > 425) err(`${pw} (${p.name}): outside the map viewport (x=${Math.round(x)}, y=${Math.round(y)})`);
   }
 }
@@ -73,6 +74,10 @@ for (const c of CONFLICTS) {
   }
   if (c.zoom !== undefined && !(typeof c.zoom === "number" && c.zoom >= 2 && c.zoom <= 12)) {
     err(`conflicts.js[${c.id}]: zoom must be a number between 2 and 12 (got ${JSON.stringify(c.zoom)})`);
+  }
+  if (c.mapCenter !== undefined && !(Array.isArray(c.mapCenter) && c.mapCenter.length === 2 &&
+    c.mapCenter.every(Number.isFinite) && Math.abs(c.mapCenter[0]) <= 180 && Math.abs(c.mapCenter[1]) <= 85)) {
+    err(`conflicts.js[${c.id}]: mapCenter must be [lon, lat] numbers in range`);
   }
   if (c.places !== undefined) checkPlaces(c);
   if (!existsSync(join(root, c.page))) err(`conflicts.js[${c.id}]: page file missing: ${c.page}`);

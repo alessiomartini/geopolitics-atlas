@@ -14,6 +14,10 @@
  * zoom (optional, default 6) is the Web-Mercator zoom level of the regional
  * map on the conflict page (js/region-map.js), centred on coordinates.
  *
+ * mapCenter (optional) is [lon, lat]: centre of the regional map only
+ * (js/region-map.js), when the places to show are not around coordinates.
+ * The homepage marker always uses coordinates. Defaults to coordinates.
+ *
  * places (optional) is a list of 1-6 key places named in content/<id>.md,
  * { name, coordinates: [lon, lat] } (2 decimals), drawn on the regional map
  * as a dot + label (js/region-map.js). Each must lie inside the map's viewport
@@ -298,9 +302,12 @@ const CONFLICTS = [
     title: "Iran-Israel Shadow War",
     summary: "Decades of covert confrontation between Iran and Israel became direct warfare in 2025-2026, including a February 2026 strike that killed Iran's Supreme Leader, leaving Iran's nuclear program's status and a durable settlement both unresolved.",
     coordinates: [51.4, 35.7],
+    mapCenter: [54.0, 31.2],
     zoom: 5,
     places: [
-      { name: "Natanz", coordinates: [51.73, 33.72] }
+      { name: "Natanz", coordinates: [51.73, 33.72] },
+      { name: "Strait of Hormuz", coordinates: [56.4, 26.6] },
+      { name: "Qeshm", coordinates: [55.9, 26.8] }
     ],
     page: "conflicts/iran-israel.html",
     content: "content/iran-israel.md",
@@ -327,9 +334,11 @@ const CONFLICTS = [
     title: "Venezuela Crisis",
     summary: "Venezuela's disputed 2024 election, US sanctions and drug-trafficking allegations, and a long-running Essequibo territorial claim against Guyana culminated in a January 2026 US military operation that captured President Maduro, leaving Vice President Delcy Rodríguez as acting president.",
     coordinates: [-66.9, 10.5],
+    mapCenter: [-63.0, 8.2],
     zoom: 6,
     places: [
-      { name: "Caracas", coordinates: [-66.9, 10.49] }
+      { name: "Caracas", coordinates: [-66.9, 10.49] },
+      { name: "Essequibo (disputed)", coordinates: [-59.3, 5.8] }
     ],
     page: "conflicts/venezuela.html",
     content: "content/venezuela.md",
