@@ -23,8 +23,8 @@
  * is being covered (e.g. a national broadcaster is third-party for a
  * conflict on the other side of the world, but an involved party for a
  * conflict its own government is fighting). Per-citation attribution in
- * the content itself is what carries that distinction — see SOURCES.md
- * for the citation rules.
+ * the content itself is what carries that distinction — see the "Citation rules"
+ * section of sources.html.
  */
 
 const SOURCE_TIERS = [
