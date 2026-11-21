@@ -1,7 +1,7 @@
 /**
  * Detailed regional map for a conflict page. Same stack as the homepage map
  * (d3 + topojson-client + the world-atlas package from jsdelivr, no tiles):
- * the map is centred on the conflict's `coordinates` from data/conflicts.js,
+ * the map is centred on the conflict's `mapCenter` (default `coordinates`) from data/conflicts.js,
  * at the entry's optional `zoom` (Web-Mercator zoom level, default 6).
  * Optional `places` are drawn as labelled dots (see drawPlaces).
  * The conflict is found by its CONTENT_FILE, like page-loader.js does.
@@ -25,8 +25,9 @@
     .attr("preserveAspectRatio", "xMidYMid meet")
     .attr("aria-label", `Regional map around ${conflict.title}`);
 
+  const center = Array.isArray(conflict.mapCenter) ? conflict.mapCenter : conflict.coordinates;
   const projection = d3.geoMercator()
-    .center(conflict.coordinates)
+    .center(center)
     .scale(scale)
     .translate([width / 2, height / 2]);
   const path = d3.geoPath(projection);
