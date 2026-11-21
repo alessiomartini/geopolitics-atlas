@@ -3,6 +3,7 @@
  * (d3 + topojson-client + the world-atlas package from jsdelivr, no tiles):
  * the map is centred on the conflict's `coordinates` from data/conflicts.js,
  * at the entry's optional `zoom` (Web-Mercator zoom level, default 6).
+ * Optional `places` are drawn as labelled dots (see drawPlaces).
  * The conflict is found by its CONTENT_FILE, like page-loader.js does.
  */
 (function () {
@@ -67,6 +68,8 @@
         .attr("r", 7)
         .attr("cx", mx)
         .attr("cy", my);
+
+      drawPlaces();
     })
     .catch((err) => {
       console.error("Failed to load regional map data:", err);
@@ -77,4 +80,46 @@
         .attr("class", "map-error")
         .text("Failed to load map data. Check your connection and reload.");
     });
+  // Key places (optional `places` in data/conflicts.js): dot + label with a
+  // halo. Labels go to the right of the dot; on collision they try left,
+  // above, below, and are skipped if still overlapping.
+  function drawPlaces() {
+    const places = Array.isArray(conflict.places) ? conflict.places : [];
+    if (!places.length) return;
+    const g = svg.append("g").attr("class", "region-places");
+    const fs = window.matchMedia("(max-width: 600px)").matches ? 14 : 11;
+    const taken = [];
+    const [cx, cy] = projection(conflict.coordinates);
+    taken.push({ x0: cx - 9, x1: cx + 9, y0: cy - 9, y1: cy + 9 });
+    const hit = (a, b) => a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0;
+    places.forEach((p) => {
+      const pt = projection(p.coordinates);
+      if (!pt) return;
+      const [x, y] = pt;
+      const w = p.name.length * fs * 0.56 + 6;
+      const h = fs + 2;
+      const cands = [
+        { dx: 6, dy: 0, anchor: "start", x0: x + 4, y0: y - h / 2 },
+        { dx: -6, dy: 0, anchor: "end", x0: x - 4 - w, y0: y - h / 2 },
+        { dx: 0, dy: -8, anchor: "middle", x0: x - w / 2, y0: y - 8 - h },
+        { dx: 0, dy: fs + 6, anchor: "middle", x0: x - w / 2, y0: y + 6 }
+      ];
+      const spot = cands.find((c) => {
+        const box = { x0: c.x0, x1: c.x0 + w, y0: c.y0, y1: c.y0 + h };
+        return box.x0 > 2 && box.x1 < width - 2 && box.y0 > 2 && box.y1 < height - 2 &&
+          !taken.some((t) => hit(box, t));
+      });
+      const dotBox = { x0: x - 3, x1: x + 3, y0: y - 3, y1: y + 3 };
+      if (!spot) { taken.push(dotBox); g.append("circle").attr("class", "place-dot").attr("r", 3).attr("cx", x).attr("cy", y).append("title").text(p.name); return; }
+      taken.push(dotBox, { x0: spot.x0, x1: spot.x0 + w, y0: spot.y0, y1: spot.y0 + h });
+      g.append("circle").attr("class", "place-dot").attr("r", 3).attr("cx", x).attr("cy", y);
+      g.append("text")
+        .attr("class", "place-label")
+        .attr("x", x + spot.dx)
+        .attr("y", y + spot.dy)
+        .attr("dy", "0.35em")
+        .attr("text-anchor", spot.anchor)
+        .text(p.name);
+    });
+  }
 })();
